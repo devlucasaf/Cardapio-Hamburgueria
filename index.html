@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <tittle>Durrr Burger - Cardápio Digital</tittle>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Durrr Burger</h1>
+                <span class="logo-subtittle">Hamburgueria Artesanal</span>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#inicio-section" class="nav-link nav-home" data-key="nav-inicio">Início</a></li>
+                    <li><a href="#entradas-section" class="nav-link nav-sobre" data-key="nav-entradas">Entradas</a></li>
+                    <li><a href="#hamburguer-section" class="nav-link nav-musica" data-key="nav-hamburguer">Burguer's</a></li>
+                    <li><a href="#acompanhamentos-section" class="nav-link nav-musica" data-key="nav-acompanhamentos">Acompanhamentos</a></li>
+                    <li><a href="#pratos-completos-section" class="nav-link nav-skills" data-key="nav-pratos-completos">Pratos Completos</a></li>
+                    <li><a href="#bebidas-section" class="nav-link nav-projetos" data-key="nav-section">Bebidas</a></li>
+                    <li><a href="#sobremesas-section" class="nav-link nav-contatos" data-key="nav-sobremesas">Sobremesas</a></li>
+                </ul>
+            </nav>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio-section" class="section cardapio">
+            <div class="container">
+                <div class="banner">
+                    <div class="banner-content">
+                        <h2 class="banner-title">O Melhor Hambúrguer da Cidade</h2>
+                        <p class="banner-slogan">Carnes naquele ponto, ingredientes selecionados e pães artesanais assados diariamente.</p>
+                        <a href="#hamburgueres" class="btn">Ver Cardápio</a>
+                    </div>
+                    <div class="banner-image">
+                        <div class="burger-img"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="entradas-section" class="section cardapio">
+            <div class="container">
+                <h2 class="section tittle">Entradas</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Bolinhas de Carne</h3>
+                            <p class="card-description">Petisco crocante preparados com carne Angus desfiada, mandioca cozida e temperos.</p>
+                            <span class="card-price">R$ 58,65</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Crispy de Queijo</h3>
+                            <p class="card-description">Crispy de queijo tipo gouda, empanado e crocante. Servida com uma geleia de pimenta.</p>
+                            <span class="card-price">R$ 58,65</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Coxinhas de Frango</h3>
+                            <p class="card-description">15 coxinhas de frango empanadas e servidas com molho tradicional da casa.</p>
+                            <span class="card-price">R$ 89,90</span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="hamburguer-section" class="section cardapio">
+            <div class="container">
+                <h2 class="section tittle">Burguer's</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Copacabanda Burger</h3>
+                            <p class="card-description">Pão brioche com gergelin, blend de costela com 200g, queijo coalho grelhado, alface, cebola roxa com maionese de limão siciliano com coentro.</p>
+                            <span class="card-price">R$ 21,93</span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="acompanhamentos-section" class="section cardapio">
+            <div class="container">
+                <h2 class="section tittle">Acompanhamentos</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Onion Rings</h3>
+                            <p class="card-description">Cebolas cprtadas em forma de anéis empanadas com uma leve camada de farinha de rosca e fritas em óleo bem quente.</p>
+                            <span class="card-price">R$ 21,93</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Batata Rústica M</h3>
+                            <p class="card-description">Batatas com cascas temperadas com páprica picante e alecrim.</p>
+                            <span class="card-price">R$ 9,90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Batata Frita M</h3>
+                            <p class="card-description">Batatas fritas temperada com sal e alecrim.</p>
+                            <span class="card-price">R$ 9,90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Batata Rústicas G</h3>
+                            <p class="card-description">Um balde médio com batatas com cascas temperadas com páprica picante e alecrim.</p>
+                            <span class="card-price">R$ 9,90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Batata Fritas G</h3>
+                            <p class="card-description">Um balde médio com batatas fritas temperada com sal e alecrim.</p>
+                            <span class="card-price">R$ 9,90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Batata Fritas Cheddar e Bacon</h3>
+                            <p class="card-description">Batata frita temperada com sal, com molho com queijo tipo cheddar e bacon crispy.</p>
+                            <span class="card-price">R$ 20,90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Chicken Nuggets 8 unidades</h3>
+                            <p class="card-description">Frango crocante, leves e delicionos.</p>
+                            <span class="card-price">R$ 15,90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Chicken Nuggets 12 unidades</h3>
+                            <p class="card-description">Frango crocante, leves e delicionos.</p>
+                            <span class="card-price">R$ 23,90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Chicken Nuggets 18 unidades</h3>
+                            <p class="card-description">Frango crocante, leves e delicionos.</p>
+                            <span class="card-price">R$ 26,90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="card-img entrada-1"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Chicken Nuggets 18 unidades</h3>
+                            <p class="card-description">Frango crocante, leves e delicionos.</p>
+                            <span class="card-price">R$ 26,90</span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+</body>
+</html>

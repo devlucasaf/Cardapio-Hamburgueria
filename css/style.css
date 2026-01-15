@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e1d6c5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: all var(--transition-normal);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
