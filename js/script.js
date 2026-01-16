@@ -162,3 +162,58 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+function fixHeaderLayout() {
+    const header = document.querySelector('header');
+    const logo = document.querySelector('.logo');
+    const nav = document.querySelector('.menu-nav');
+    
+    if (header && logo && nav) {
+        const headerHeight = header.offsetHeight;
+        const logoHeight = logo.offsetHeight;
+        
+        if (logoHeight > 60) {
+            header.style.padding = '15px 0';
+        }
+        
+        nav.style.display = 'flex';
+        nav.style.alignItems = 'center';
+    }
+}
+
+window.addEventListener('load', fixHeaderLayout);
+window.addEventListener('resize', fixHeaderLayout);
+
+function optimizeMenu() {
+    const nav = document.querySelector('.menu-nav');
+    const navItems = document.querySelectorAll('.menu-nav a');
+    const windowWidth = window.innerWidth;
+    
+    if (windowWidth < 950 && windowWidth > 768) {
+        navItems.forEach(item => {
+            const text = item.textContent;
+            let shortText = text;
+            
+            if (text.includes('Combo')) shortText = 'Combos';
+            if (text.includes('Acompanhamentos')) shortText = 'Acomp.';
+            if (text.includes('Sobremesas')) shortText = 'Doces';
+            if (text.includes('Bebidas')) shortText = 'Bebidas';
+            if (text.includes('Burguer')) shortText = 'Burgers';
+            if (text.includes('Entradas')) shortText = 'Entradas';
+            if (text === 'Início') shortText = 'Início';
+            
+            item.setAttribute('data-long', text);
+            item.innerHTML = `<span class="short-text">${shortText}</span>
+                            <span class="long-text" style="display:none;">${text}</span>`;
+        });
+    } 
+    else {
+        navItems.forEach(item => {
+            const longText = item.getAttribute('data-long') || item.textContent;
+            item.innerHTML = longText;
+        });
+    }
+}
+
+window.addEventListener('load', optimizeMenu);
+window.addEventListener('resize', optimizeMenu);

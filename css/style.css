@@ -1,4 +1,3 @@
-/* Reset e configurações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +28,6 @@ body {
     padding: 80px 0;
 }
 
-/* Paleta de cores rústica */
 :root {
     --wood-dark: #5D4037;
     --wood-medium: #795548;
@@ -42,7 +40,6 @@ body {
     --shadow: rgba(61, 35, 28, 0.15);
 }
 
-/* Cabeçalho */
 header {
     background-color: var(--wood-dark);
     background-image: linear-gradient(to right, var(--wood-dark), var(--wood-medium));
@@ -53,86 +50,142 @@ header {
     z-index: 1000;
     box-shadow: 0 4px 20px var(--shadow);
     border-bottom: 3px solid var(--burnt-orange);
+    height: 90px;
+    display: flex;
+    align-items: center;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 200px;
+    height: 100%;
+    padding: 10px 0;
+    flex-shrink: 0;
 }
 
 .logo h1 {
     font-family: 'Fredoka One', cursive;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: 1px;
     color: var(--cream);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    position: relative;
-    display: inline-block;
-}
-
-.logo h1::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--burnt-orange);
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    display: block;
+    white-space: nowrap;
 }
 
 .logo-subtitle {
-    font-size: 0.8rem;
-    opacity: 0.9;
+    font-size: 1.1rem;
+    color: var(--mustard);
+    font-style: italic;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    opacity: 0.95;
+    font-weight: 500;
     display: block;
-    margin-top: -2px;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 0.9rem;
     color: var(--cream);
     font-style: italic;
+    margin-top: 3px;
+    opacity: 0.8;
+    display: block;
+}
+
+.menu-nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .menu-nav ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 2px;
 }
 
 .menu-nav li {
-    margin-left: 25px;
-    position: relative;
+    margin: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .menu-nav a {
     color: var(--cream);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
-    padding: 8px 12px;
+    font-size: 0.85rem;
+    padding: 8px 10px;
     transition: all 0.3s;
     border-radius: 4px;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    white-space: nowrap;
+    min-width: 65px;
+    text-align: center;
+    line-height: 1.2;
 }
 
 .menu-nav a:hover {
     color: var(--mustard);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .menu-nav a.active {
     color: var(--mustard);
     background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 700;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.menu-nav a.active::before {
+.menu-nav a.active::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 12px;
-    right: 12px;
+    bottom: -2px;
+    left: 10px;
+    right: 10px;
     height: 2px;
     background-color: var(--mustard);
     border-radius: 1px;
+}
+
+.menu-nav a[href="#combo-hamburguer-section"] {
+    font-size: 0.8rem;
+    min-width: 70px;
+}
+
+.menu-nav a[href="#acompanhamentos-section"] {
+    font-size: 0.8rem;
+    min-width: 75px;
 }
 
 .menu-toggle {
@@ -140,21 +193,25 @@ header .container {
     background: none;
     border: none;
     color: var(--cream);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     transition: color 0.3s;
+    padding: 5px;
+    margin-left: 10px;
+    flex-shrink: 0;
 }
 
 .menu-toggle:hover {
     color: var(--mustard);
+    transform: scale(1.1);
 }
 
-/* Banner Inicial */
 .inicio {
+    margin-top: 90px;
     background: linear-gradient(rgba(93, 64, 55, 0.9), rgba(121, 85, 72, 0.9)), 
                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="wood" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="%235D4037"/><path d="M0,0 L100,100 M50,0 L0,50 M100,50 L50,100" stroke="%233E2723" stroke-width="2" opacity="0.3"/></pattern></defs><rect width="1200" height="600" fill="url(%23wood)"/></svg>');
     color: var(--cream);
-    padding-top: 140px;
+    padding: 60px 0;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -179,6 +236,8 @@ header .container {
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
+    min-height: 450px;
+    padding: 20px 0;
 }
 
 .banner-content {
@@ -189,26 +248,35 @@ header .container {
 
 .banner-title {
     font-family: 'Fredoka One', cursive;
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
     line-height: 1.2;
     color: var(--cream);
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
+.banner-subtitle {
+    font-size: 1.8rem;
+    color: var(--mustard);
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
 .banner-slogan {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
     opacity: 0.95;
     font-style: italic;
     color: var(--cream);
+    line-height: 1.5;
 }
 
 .btn {
     display: inline-block;
     background-color: var(--burnt-orange);
     color: var(--cream);
-    padding: 14px 35px;
+    padding: 15px 35px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 700;
@@ -219,6 +287,8 @@ header .container {
     box-shadow: 0 4px 15px rgba(191, 54, 12, 0.4);
     position: relative;
     overflow: hidden;
+    text-align: center;
+    min-width: 180px;
 }
 
 .btn:hover {
@@ -237,8 +307,8 @@ header .container {
 }
 
 .burger-img {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
     background-color: var(--wood-light);
     border-radius: 50%;
     display: flex;
@@ -253,26 +323,25 @@ header .container {
 .burger-img::before {
     content: '';
     position: absolute;
-    width: 250px;
-    height: 150px;
+    width: 220px;
+    height: 130px;
     background-color: var(--wood-dark);
     border-radius: 50%;
-    top: 60px;
+    top: 70px;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .burger-img::after {
     content: '';
     position: absolute;
-    width: 300px;
-    height: 60px;
+    width: 280px;
+    height: 50px;
     background-color: #5D4037;
-    border-radius: 30px;
-    bottom: 80px;
+    border-radius: 25px;
+    bottom: 70px;
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Seções do Cardápio */
 .section-title {
     font-family: 'Fredoka One', cursive;
     font-size: 2.8rem;
@@ -313,7 +382,6 @@ header .container {
     z-index: 1;
 }
 
-/* Cards */
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -362,7 +430,6 @@ header .container {
     overflow: hidden;
 }
 
-/* Imagens das entradas */
 .entrada-1 {
     background: linear-gradient(45deg, #8B4513, #A0522D);
 }
@@ -375,7 +442,6 @@ header .container {
     background: linear-gradient(45deg, #A0522D, #DEB887);
 }
 
-/* Imagens dos hambúrgueres */
 .hamburguer-1, .hambuguer-1 {
     background: linear-gradient(45deg, #8B4513, #D2691E, #A0522D);
 }
@@ -420,7 +486,6 @@ header .container {
     background: linear-gradient(45deg, #8B4513, #33691E, #A0522D);
 }
 
-/* Imagens dos combos */
 .combo-1 {
     background: linear-gradient(45deg, #D2691E, #FF8F00, #8B4513);
 }
@@ -465,7 +530,6 @@ header .container {
     background: linear-gradient(45deg, #33691E, #8B4513, #A0522D);
 }
 
-/* Imagens dos acompanhamentos */
 .acompanhamento-1 {
     background: linear-gradient(45deg, #D2691E, #FF8F00);
 }
@@ -506,7 +570,6 @@ header .container {
     background: linear-gradient(45deg, #A0522D, #8B4513);
 }
 
-/* Imagens das bebidas */
 .bebida-1 {
     background: linear-gradient(45deg, #C62828, #E53935);
 }
@@ -527,7 +590,6 @@ header .container {
     background: linear-gradient(45deg, #795548, #8D6E63);
 }
 
-/* Imagens das sobremesas */
 .sobremesa-1 {
     background: linear-gradient(45deg, #5D4037, #8D6E63);
 }
@@ -583,7 +645,6 @@ header .container {
     border: 2px solid var(--burnt-orange);
 }
 
-/* Rodapé */
 footer {
     background-color: var(--wood-dark);
     color: var(--cream);
@@ -693,10 +754,73 @@ footer::before {
     margin-bottom: 5px;
 }
 
-/* Responsividade */
-@media (max-width: 992px) {
+@media (max-width: 1150px) {
+    .menu-nav a {
+        font-size: 0.82rem;
+        padding: 7px 9px;
+        min-width: 60px;
+    }
+    
+    .menu-nav a[href="#combo-hamburguer-section"],
+    .menu-nav a[href="#acompanhamentos-section"] {
+        font-size: 0.78rem;
+        min-width: 65px;
+    }
+    
+    .logo h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1050px) {
+    .menu-nav a {
+        font-size: 0.78rem;
+        padding: 6px 8px;
+        min-width: 58px;
+    }
+    
+    .menu-nav a[href="#combo-hamburguer-section"],
+    .menu-nav a[href="#acompanhamentos-section"] {
+        font-size: 0.75rem;
+        min-width: 62px;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .menu-nav a {
+        font-size: 0.75rem;
+        padding: 6px 7px;
+        min-width: 55px;
+    }
+    
+    .menu-nav a[href="#combo-hamburguer-section"],
+    .menu-nav a[href="#acompanhamentos-section"] {
+        font-size: 0.72rem;
+        min-width: 60px;
+    }
+    
+    .logo h1 {
+        font-size: 1.9rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.95rem;
+    }
+    
     .banner-title {
         font-size: 2.5rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.6rem;
     }
     
     .section-title {
@@ -708,7 +832,74 @@ footer::before {
     }
 }
 
+@media (max-width: 850px) {
+    header {
+        height: 85px;
+    }
+    
+    .inicio {
+        margin-top: 85px;
+    }
+    
+    .menu-nav a {
+        font-size: 0.72rem;
+        padding: 5px 6px;
+        min-width: 52px;
+    }
+    
+    .menu-nav a[href="#combo-hamburguer-section"],
+    .menu-nav a[href="#acompanhamentos-section"] {
+        font-size: 0.7rem;
+        min-width: 58px;
+    }
+    
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .tagline {
+        font-size: 0.85rem;
+    }
+}
+
 @media (max-width: 768px) {
+    header {
+        height: 80px;
+    }
+    
+    .inicio {
+        margin-top: 80px;
+        padding: 50px 0;
+    }
+    
+    header .container {
+        padding: 0 15px;
+        gap: 15px;
+    }
+    
+    .logo {
+        min-width: auto;
+    }
+    
+    .logo h1 {
+        font-size: 1.7rem;
+        white-space: normal;
+        line-height: 1.1;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.85rem;
+        white-space: normal;
+    }
+    
+    .tagline {
+        font-size: 0.8rem;
+    }
+    
     .menu-toggle {
         display: block;
     }
@@ -720,46 +911,61 @@ footer::before {
         width: 100%;
         background-color: var(--wood-dark);
         padding: 20px;
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         z-index: 999;
+        border-top: 2px solid var(--burnt-orange);
+        height: auto;
+        display: none;
     }
     
     .menu-nav.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
+        display: block;
     }
     
     .menu-nav ul {
         flex-direction: column;
-        align-items: center;
+        gap: 10px;
+        width: 100%;
     }
     
     .menu-nav li {
-        margin: 15px 0;
+        width: 100%;
+        height: auto;
     }
     
     .menu-nav a {
         font-size: 1.1rem;
-        padding: 10px 20px;
+        padding: 14px 20px;
+        width: 100%;
+        min-width: auto;
+        justify-content: flex-start;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .menu-nav a[href="#combo-hamburguer-section"],
+    .menu-nav a[href="#acompanhamentos-section"] {
+        font-size: 1.1rem;
+        min-width: auto;
     }
     
     .banner {
         flex-direction: column;
         text-align: center;
+        min-height: 380px;
     }
     
     .banner-content {
         padding-right: 0;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     
     .banner-title {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.4rem;
     }
     
     .banner-slogan {
@@ -778,19 +984,42 @@ footer::before {
         width: 280px;
         height: 280px;
     }
+    
+    .btn {
+        padding: 14px 30px;
+        font-size: 1.1rem;
+        min-width: 170px;
+    }
 }
 
 @media (max-width: 576px) {
+    header {
+        height: 75px;
+    }
+    
+    .inicio {
+        margin-top: 75px;
+        padding: 40px 0;
+    }
+    
     .logo h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     
     .logo-subtitle {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+    }
+    
+    .tagline {
+        font-size: 0.75rem;
     }
     
     .banner-title {
-        font-size: 1.9rem;
+        font-size: 2rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.3rem;
     }
     
     .banner-slogan {
@@ -817,5 +1046,40 @@ footer::before {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+    
+    .logo-subtitle {
+        font-size: 0.75rem;
+    }
+    
+    .tagline {
+        font-size: 0.7rem;
+    }
+    
+    .banner-title {
+        font-size: 1.8rem;
+    }
+    
+    .menu-nav a {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        min-width: 140px;
     }
 }
