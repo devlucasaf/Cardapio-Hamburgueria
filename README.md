@@ -3,23 +3,6 @@
     src="https://capsule-render.vercel.app/api?type=waving&color=A020F0&height=120&section=header"
 />
 
-<div align="right">
-    <a href="README-ing-us.md">
-        <img 
-            src="./assets/flags/us_flag.png" 
-            width="17px"
-        />
-        English
-    </a>
-    | 
-    <a href="README.md">
-        <img 
-            src="./assets/flags/br_flag.png" 
-            width="17px">
-        Português
-    </a>
-</div>
-
 # 🍔 Durrr Burger - Cardápio Digital 
 
 Um cardápio digital moderno e responsivo para a hamburgueria Durrr Burger, desenvolvido com HTML, CSS e JavaScript puro.
@@ -37,8 +20,7 @@ Este projeto foi desenvolvido para fornecer uma experiência digital aos cliente
   │   └── style.css
   ├── js/
   │   └── script.js
-  ├──README.md
-  └── README-pt-br.md
+  └── README.md
 ```
 
 # 🛠️ Technologies used
