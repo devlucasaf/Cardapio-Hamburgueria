@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   console.log('✅ Durrr Burger JS Iniciado');
 
-  // ===== 1. MENU MOBILE =====
   const menuToggle = document.querySelector('.menu-toggle');
   const menuNav = document.querySelector('.menu-nav');
 
@@ -17,11 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ===== 2. NAVEGAÇÃO =====
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.section');
 
-  // SEMPRE LIMPA: classes + estilos inline
   function resetNavLinks() {
     navLinks.forEach((link) => {
       link.classList.remove('active', 'current');
@@ -29,14 +26,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ATIVA APENAS UM POR VEZ
   function activateLink(linkToActivate) {
     if (!linkToActivate) return;
     resetNavLinks();
     linkToActivate.classList.add('active', 'current');
   }
 
-  // FECHAR MENU MOBILE (se estiver aberto)
   function closeMobileMenuIfOpen() {
     if (!menuNav || !menuToggle) return;
 
@@ -51,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // ROLAGEM SUAVE ATÉ UMA SEÇÃO
   function scrollToTarget(targetSelector) {
     if (!targetSelector || !targetSelector.startsWith('#')) return;
     const targetElement = document.querySelector(targetSelector);
@@ -63,25 +57,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // CLIQUE NOS LINKS DO MENU
   navLinks.forEach((link) => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
 
       const targetId = this.getAttribute('href');
 
-      // 1) ativar só este
       activateLink(this);
 
-      // 2) fechar menu mobile se aberto
       closeMobileMenuIfOpen();
 
-      // 3) rolar
       scrollToTarget(targetId);
     });
   });
 
-  // ===== 3. DESTAQUE AUTOMÁTICO AO ROLAR =====
   function highlightOnScroll() {
     let current = '';
     const scrollPos = window.scrollY + 100;
@@ -103,10 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', highlightOnScroll);
 
-  // Executar ao carregar
   highlightOnScroll();
 
-  // ===== 4. BOTÃO "VER CARDÁPIO" =====
   const btnVerCardapio = document.querySelector('.btn');
   if (btnVerCardapio) {
     btnVerCardapio.addEventListener('click', function (e) {
@@ -114,19 +101,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const target = '#hamburguer-section';
 
-      // ativa o link correspondente
       const linkBurguer = document.querySelector(`.nav-link[href="${target}"]`);
       if (linkBurguer) activateLink(linkBurguer);
 
-      // rola até a seção
       scrollToTarget(target);
 
-      // fecha menu mobile se estiver aberto
       closeMobileMenuIfOpen();
     });
   }
 
-  // ===== 5. ANIMAÇÃO DOS CARDS =====
   const cards = document.querySelectorAll('.card');
 
   if (cards.length > 0 && 'IntersectionObserver' in window) {
@@ -166,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ===== 6. FUNÇÃO RESPONSIVA DO MENU =====
   function adjustMenuText() {
     const screenWidth = window.innerWidth;
     const navItems = document.querySelectorAll('.menu-nav a');
@@ -199,7 +181,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   console.log('✅ JavaScript configurado com sucesso!');
 
-  // ===== 7. CSS FORTE PARA O LINK ATIVO (1 ÚNICO POR VEZ) =====
   const style = document.createElement('style');
   style.innerHTML = `
     .menu-nav a.current,
