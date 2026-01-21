@@ -1,730 +1,1118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <tittle>Durrr Burger - Cardápio Digital</tittle>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Durrr Burger</h1>
-                <span class="logo-subtittle">Hamburgueria Artesanal</span>
-            </div>
-
-            <nav class="menu-nav">
-                <ul>
-                    <li><a href="#inicio-section" class="nav-link active" data-long="Início"><span class="long-text">Início</span><span class="short-text"></span></a></li>
-                    <li><a href="#entradas-section" class="nav-link" data-long="Entradas"><span class="long-text">Entradas</span><span class="short-text"></span></a></li>
-                    <li><a href="#hamburguer-section" class="nav-link" data-long="Burguer's"><span class="long-text">Burguer's</span><span class="short-text"></span></a></li>
-                    <li><a href="#combo-hamburguer-section" class="nav-link" data-long="Combo Burguer's"><span class="long-text">Combo Burguer's</span><span class="short-text"></span></a></li>
-                    <li><a href="#acompanhamentos-section" class="nav-link" data-long="Acompanhamentos"><span class="long-text">Acompanhamentos</span><span class="short-text"></span></a></li>
-                    <li><a href="#bebidas-section" class="nav-link" data-long="Bebidas"><span class="long-text">Bebidas</span><span class="short-text"></span></a></li>
-                    <li><a href="#sobremesas-section" class="nav-link" data-long="Sobremesas"><span class="long-text">Sobremesas</span><span class="short-text"></span></a></li>
-                </ul>
-            </nav>
-            
-            <button class="menu-toggle" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </header>
-
-    <main>
-        <section id="inicio-section" class="section cardapio">
-            <div class="logo">
-                <h1>Durrr Burger</h1>
-                <span class="logo-subtitle">Hamburgueria Artesanal</span>
-            </div>
-
-            <div class="banner-content">
-                <h2 class="banner-title">O Melhor Hambúrguer da Cidade</h2>
-                <p class="banner-slogan">Carnes naquele ponto, ingredientes selecionados e pães artesanais assados diariamente.</p>
-                <a href="#hamburgueres" class="btn">Ver Cardápio</a>
-            </div>
-        </section>
-
-        <section id="entradas-section" class="section cardapio">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <tittle>Durrr Burger - Cardápio Digital</tittle>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
             <div class="container">
-                <h2 class="section-title">Entradas</h2>
-                <div class="cards-container">
-                    <div class="card">
-                        <div class="card-img entrada-1"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Bolinhas de Carne</h3>
-                            <p class="card-description">Petisco crocante preparados com carne Angus desfiada, mandioca cozida e temperos.</p>
-                            <span class="card-price">R$ 58,65</span>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-img entrada-2"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Crispy de Queijo</h3>
-                            <p class="card-description">Crispy de queijo tipo gouda, empanado e crocante. Servido com uma geleia de pimenta.</p>
-                            <span class="card-price">R$ 58,65</span>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-img entrada-3"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Coxinhas de Frango</h3>
-                            <p class="card-description">15 coxinhas de frango empanadas e servidas com molho tradicional da casa.</p>
-                            <span class="card-price">R$ 89,90</span>
-                        </div>
-                    </div>
+                <div class="logo">
+                    <h1>Durrr Burger</h1>
+                    <span class="logo-subtittle">Hamburgueria Artesanal</span>
                 </div>
-            </div>
-        </section>
 
-        <!-- Seção de Hamburgueres -->
-
-        <section id="hamburguer-section" class="section cardapio">
-            <div class="container">
-                <h2 class="section tittle">Burguer's</h2>
-                <div class="cards-container">
-                    <div class="card">
-                        <div class="card-img hambuguer-1"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Copacabana Burger</h3>
-                            <p class="card-description">Pão brioche com gergelin, blend de costela com 200g, queijo coalho grelhado, alface, cebola roxa com maionese de limão siciliano com coentro.</p>
-                            <span class="card-price">R$ 21,93</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-2"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Avenida Paulista Burger</h3>
-                            <p class="card-description">Pão brioche artesanal, blend de fraldinha com 200g, queijo coalho grelhado, molho chimichurri, rúcula, tomate e cebola roxa caramelizada.</p>
-                            <span class="card-price">R$ 38,46</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-3"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Cataratas do Iguaçu Burger</h3>
-                            <p class="card-description">Pão rústico com gergelim, blend de costela com 200g, queijo provolone, molho de ervas, pepino, alface, pimenta dedo de moça e chips de mandio crocante.</p>
-                            <span class="card-price">R$ 42,54</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-4"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Jardim Botânico Burger</h3>
-                            <p class="card-description">Pão de espinafre, sobrecoxa de frango, queijo branco derretido, molho de ervas, rúcula, alface e tomate fresco.</p>
-                            <span class="card-price">R$ 34,20</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-5"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Congresso Nacional Burger</h3>
-                            <p class="card-description">Pão artesanal duplo, 2 blends de fraldinha, queijo meia cura, molho de pequi, agrião, alface, cebola caramelizada e chips de batata doce.</p>
-                            <span class="card-price">R$ 42,50</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-6"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Pelourinho Burger</h3>
-                            <p class="card-description">Pão cúrcuma, blend de fraldinha, queijo coalho derretido, molho de dendê, vinagrete, alface e chips de banana-da-terra.</p>
-                            <span class="card-price">R$ 38,45</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-7"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Jericoacoara Burger</h3>
-                            <p class="card-description">Pão de batata, blend de fraldinha, queijo coalho grelhado, molho de castanha de caju, vinagrete com manga e coentro, alface, rúcula e chips de mandioca crocante.</p>
-                            <span class="card-price">R$ 40,67</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-8"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Lençóis Maranhenses Burger</h3>
-                            <p class="card-description">Pão branco artesanal, blend de fraldinha, queijo coalho derretido, molho de coco com toque de limão, alface, rúcula, tomate confitado e chips de mandioca crocante.</p>
-                            <span class="card-price">R$ 35,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-9"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Monte Roraima Burger</h3>
-                            <p class="card-description">Pão rústico de malte, blend de fraldinha com toque de cupuaçu, queijo maturado artesanal, molho de castanha do pará, alface, jambu, cebola roxa grelhada e chips de banana pacovã.</p>
-                            <span class="card-price">R$ 40,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-10"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Serra Gaúcha Burger</h3>
-                            <p class="card-description">Pão de malte, blend de fraldinha com toque de linguiça artesanal, queijo colonial derretido, molho de vilho tinto reduzido, alface, rúcula, cogumelos salteados na manteiga e chips de polenta crocante.</p>
-                            <span class="card-price">R$ 43,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img hambuguer-11"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Pantanal Burger</h3>
-                            <p class="card-description">Pão integral com semestes, hambúrguer de feijão-preto e quinoa, queijo vegano de castanha de caju, molho de manga com toque de pimenta suave, alface, rúcula, chips de mandioca crocante.</p>
-                            <span class="card-price">R$ 34,90</span>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <!-- Seção de Combos -->
-
-        <section id="combo-hamburguer-section" class="section cardapio">
-            <div class="container">
-                <h2 class="section tittle">Combo Burguer's</h2>
-                <div class="cards-container">
-                    
-                    <div class="card">
-                        <div class="card-img combo-1"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Copacabana Combo</h3>
-                            <p class="card-description">Copacabana Burger + Batata frita + Refrigerante ou suco.</p>
-                            <span class="card-price">R$ 34,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-2"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Avenida Paulista Combo</h3>
-                            <p class="card-description">Avenida Paulista Burger + Batata rústica + Caipirinha ou refrigerante.</p>
-                            <span class="card-price">R$ 52,00</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-3"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Cataratas do Iguaçu Combo</h3>
-                            <p class="card-description">Cataratas Burger + Mandioca frita + Suco tropical.</p>
-                            <span class="card-price">R$ 56,00</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-4"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Jardim Botânico Combo</h3>
-                            <p class="card-description">Jardim Botânico Burger + Chips de legumes + Suco natural.</p>
-                            <span class="card-price">R$ 48,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-5"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Congresso Nacional Combo</h3>
-                            <p class="card-description">Congresso Nacional Burger + Chips de batata-doce + Refrigerante ou suco.</p>
-                            <span class="card-price">R$ 57,00</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-6"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Pelourinho Combo</h3>
-                            <p class="card-description">Pelourinho Burger + Chips de banana-da-terra + Suco de maracujá.</p>
-                            <span class="card-price">R$ 52,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-7"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Jericoacoara Combo</h3>
-                            <p class="card-description">Jericoacoara Burger + Chips de mandioca + Suco de caju.</p>
-                            <span class="card-price">R$ 55,00</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-8"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Lençóis Maranhenses Combo</h3>
-                            <p class="card-description">Lençóis Burger + Mandioca frita + Guaraná Jesus ou suco de cupuaçu.</p>
-                            <span class="card-price">R$ 50,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-9"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Monte Roraima Combo</h3>
-                            <p class="card-description">Monte Roraima Burger + Chips de banana pacovã + Suco de cupuaçu.</p>
-                            <span class="card-price">R$ 56,00</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-10"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Serra Gaúcha Combo</h3>
-                            <p class="card-description">Serra Gaúcha Burger + Chips de polenta + Suco de uva ou vinho da casa.</p>
-                            <span class="card-price">R$ 59,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img combo-11"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Pantanal Combo</h3>
-                            <p class="card-description">Pantanal Burger (vegano) + Chips de mandioca crocante + Suco natural de manga ou limão.</p>
-                            <span class="card-price">R$ 52,90</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="acompanhamentos-section" class="section cardapio">
-            <div class="container">
-                <h2 class="section tittle">Acompanhamentos</h2>
+                <nav class="menu-nav">
+                    <ul>
+                        <li><a href="#inicio-section" class="nav-link active" data-long="Início"><span class="long-text">Início</span><span class="short-text"></span></a></li>
+                        <li><a href="#entradas-section" class="nav-link" data-long="Entradas"><span class="long-text">Entradas</span><span class="short-text"></span></a></li>
+                        <li><a href="#hamburguer-section" class="nav-link" data-long="Burguer's"><span class="long-text">Burguer's</span><span class="short-text"></span></a></li>
+                        <li><a href="#combo-hamburguer-section" class="nav-link" data-long="Combo Burguer's"><span class="long-text">Combo Burguer's</span><span class="short-text"></span></a></li>
+                        <li><a href="#acompanhamentos-section" class="nav-link" data-long="Acompanhamentos"><span class="long-text">Acompanhamentos</span><span class="short-text"></span></a></li>
+                        <li><a href="#bebidas-section" class="nav-link" data-long="Bebidas"><span class="long-text">Bebidas</span><span class="short-text"></span></a></li>
+                        <li><a href="#sobremesas-section" class="nav-link" data-long="Sobremesas"><span class="long-text">Sobremesas</span><span class="short-text"></span></a></li>
+                    </ul>
+                </nav>
                 
-                <div class="card">
-                    <div class="card-img acompanhamento-1"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Onion Rings</h3>
-                        <p class="card-description">Cebolas cortadas em forma de anéis empanadas com uma leve camada de farinha de rosca e fritas em óleo bem quente.</p>
-                        <span class="card-price">R$ 21,93</span>  
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img acompanhamento-2"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Batata Rústica M</h3>
-                        <p class="card-description">Batatas com cascas temperadas com páprica picante e alecrim.</p>
-                        <span class="card-price">R$ 10,90</span>  
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img acompanhamento-3"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Batata Frita M</h3>
-                        <p class="card-description">Batatas fritas temperada com sal e alecrim.</p>
-                        <span class="card-price">R$ 9,90</span>  
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img acompanhamento-4"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Batata Rústicas G</h3>
-                        <p class="card-description">Um balde médio com batatas com cascas temperadas com páprica picante e alecrim.</p>
-                        <span class="card-price">R$ 17,90</span>  
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img acompanhamento-5"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Batata Frita G</h3>
-                        <p class="card-description">Um balde médio com batatas fritas temperada com sal e alecrim.</p>
-                        <span class="card-price">R$ 16,90</span>  
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-img acompanhamento-6"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Batata Fritas Cheddar e Bacon</h3>
-                        <p class="card-description">Batata frita temperada com sal, com molho com queijo tipo cheddar e bacon crispy.</p>
-                        <span class="card-price">R$ 20,90</span>  
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img acompanhamento-7"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Batata Fritas Cheddar e Bacon</h3>
-                        <p class="card-description">Batata frita temperada com sal, com molho com queijo tipo cheddar e bacon crispy.</p>
-                        <span class="card-price">R$ 20,90</span>  
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img acompanhamento-8"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Chicken Nuggets 8 unidades</h3>
-                        <p class="card-description">Frango crocante, leves e delicionos.</p>
-                        <span class="card-price">R$ 15,90</span>  
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img acompanhamento-9"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Chicken Nuggets 12 unidades</h3>
-                        <p class="card-description">Frango crocante, leves e delicionos.</p>
-                        <span class="card-price">R$ 23,90</span>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-img acompanhamento-10"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Chicken Nuggets 18 unidades</h3>
-                        <p class="card-description">Frango crocante, leves e delicionos.</p>
-                        <span class="card-price">R$ 26,90</span>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-img entrada-1"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Chicken Nuggets 18 unidades</h3>
-                        <p class="card-description">Frango crocante, leves e delicionos.</p>
-                        <span class="card-price">R$ 26,90</span>
-                    </div>
-                </div>
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </section>
+        </header>
 
-        <section id="bebidas-section" class="section cardapio">
-            <div class="container">
-                <h2 class="section tittle">Bebidas</h2>
+        <main>
+            <section id="inicio-section" class="section cardapio">
+                <div class="logo">
+                    <h1>Durrr Burger</h1>
+                    <span class="logo-subtitle">Hamburgueria Artesanal</span>
+                </div>
 
-                <div class="bebida-categoria">
-                    <h3 class="categoria-title">Refrigerantes</h3>
+                <div class="banner-content">
+                    <h2 class="banner-title">O Melhor Hambúrguer da Cidade</h2>
+                    <p class="banner-slogan">Carnes naquele ponto, ingredientes selecionados e pães artesanais assados diariamente.</p>
+                    <a href="#hamburgueres" class="btn">Ver Cardápio</a>
+                </div>
+            </section>
 
+            <section id="entradas-section" class="section cardapio">
+                <div class="container">
+                    <h2 class="section-title">Entradas</h2>
                     <div class="cards-container">
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Pepsi</span>
+                        <div class="card">
+                            <div class="card-img entrada-1"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Bolinhas de Carne</h3>
+                                <p class="card-description">Petisco crocante preparados com carne Angus desfiada, mandioca cozida e temperos.</p>
+                                <span class="card-price">R$ 58,65</span>
                             </div>
-                            <span class="card-price">R$ 6,90</span>
-                        </div>
-
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Pepsi Black</span>
-                            </div>
-                            <span class="card-price">R$ 6,90</span>
-                        </div>
-
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Guaraná Antártica</span>
-                            </div>
-                            <span class="card-price">R$ 6,90</span>
-                        </div>
-
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Guaraná Antártica Zero</span>
-                            </div>
-                            <span class="card-price">R$ 6,90</span>
-                        </div>
-
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Soda Limonanda</span>
-                            </div>
-                            <span class="card-price">R$ 6,90</span>
-                        </div>
-
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Coca-Cola</span>
-                            </div>
-                            <span class="card-price">R$ 6,90</span>
-                        </div>
-
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Coca-Cola Zero</span>
-                            </div>
-                            <span class="card-price">R$ 6,90</span>
-                        </div>
-
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Fanta Laranja</span>
-                            </div>
-                            <span class="card-price">R$ 6,90</span>
                         </div>
                         
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Fanta Uva</span>
+                        <div class="card">
+                            <div class="card-img entrada-2"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Crispy de Queijo</h3>
+                                <p class="card-description">Crispy de queijo tipo gouda, empanado e crocante. Servido com uma geleia de pimenta.</p>
+                                <span class="card-price">R$ 58,65</span>
                             </div>
-                            <span class="card-price">R$ 6,90</span>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-img entrada-3"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Coxinhas de Frango</h3>
+                                <p class="card-description">15 coxinhas de frango empanadas e servidas com molho tradicional da casa.</p>
+                                <span class="card-price">R$ 89,90</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="bebida-categoria">
-                    <h3 class="categoria-title">Milkshakes</h3>
+            <!-- Seção de Hamburgueres -->
 
+            <section id="hamburguer-section" class="section cardapio">
+                <div class="container">
+                    <h2 class="section tittle">Burguer's</h2>
                     <div class="cards-container">
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Chocolate</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-1"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Copacabana Burger</h3>
+                                <p class="card-description">Pão brioche com gergelin, blend de costela com 200g, queijo coalho grelhado, alface, cebola roxa com maionese de limão siciliano com coentro.</p>
+                                <span class="card-price">R$ 21,93</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Chocolate Belga</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-2"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Avenida Paulista Burger</h3>
+                                <p class="card-description">Pão brioche artesanal, blend de fraldinha com 200g, queijo coalho grelhado, molho chimichurri, rúcula, tomate e cebola roxa caramelizada.</p>
+                                <span class="card-price">R$ 38,46</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Flocos</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-3"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Cataratas do Iguaçu Burger</h3>
+                                <p class="card-description">Pão rústico com gergelim, blend de costela com 200g, queijo provolone, molho de ervas, pepino, alface, pimenta dedo de moça e chips de mandio crocante.</p>
+                                <span class="card-price">R$ 42,54</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Creme</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-4"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Jardim Botânico Burger</h3>
+                                <p class="card-description">Pão de espinafre, sobrecoxa de frango, queijo branco derretido, molho de ervas, rúcula, alface e tomate fresco.</p>
+                                <span class="card-price">R$ 34,20</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Leite Ninho</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-5"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Congresso Nacional Burger</h3>
+                                <p class="card-description">Pão artesanal duplo, 2 blends de fraldinha, queijo meia cura, molho de pequi, agrião, alface, cebola caramelizada e chips de batata doce.</p>
+                                <span class="card-price">R$ 42,50</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Morango</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-6"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Pelourinho Burger</h3>
+                                <p class="card-description">Pão cúrcuma, blend de fraldinha, queijo coalho derretido, molho de dendê, vinagrete, alface e chips de banana-da-terra.</p>
+                                <span class="card-price">R$ 38,45</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Banana com Canela</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-7"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Jericoacoara Burger</h3>
+                                <p class="card-description">Pão de batata, blend de fraldinha, queijo coalho grelhado, molho de castanha de caju, vinagrete com manga e coentro, alface, rúcula e chips de mandioca crocante.</p>
+                                <span class="card-price">R$ 40,67</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Red Velvet</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-8"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Lençóis Maranhenses Burger</h3>
+                                <p class="card-description">Pão branco artesanal, blend de fraldinha, queijo coalho derretido, molho de coco com toque de limão, alface, rúcula, tomate confitado e chips de mandioca crocante.</p>
+                                <span class="card-price">R$ 35,90</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Caramelo Salgado</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-9"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Monte Roraima Burger</h3>
+                                <p class="card-description">Pão rústico de malte, blend de fraldinha com toque de cupuaçu, queijo maturado artesanal, molho de castanha do pará, alface, jambu, cebola roxa grelhada e chips de banana pacovã.</p>
+                                <span class="card-price">R$ 40,90</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Ninho com Nutella</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-10"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Serra Gaúcha Burger</h3>
+                                <p class="card-description">Pão de malte, blend de fraldinha com toque de linguiça artesanal, queijo colonial derretido, molho de vilho tinto reduzido, alface, rúcula, cogumelos salteados na manteiga e chips de polenta crocante.</p>
+                                <span class="card-price">R$ 43,90</span>
                             </div>
-                            <span class="card-price">R$ 21,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Brownie</span>
+                        <div class="card">
+                            <div class="card-img hambuguer-11"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Pantanal Burger</h3>
+                                <p class="card-description">Pão integral com semestes, hambúrguer de feijão-preto e quinoa, queijo vegano de castanha de caju, molho de manga com toque de pimenta suave, alface, rúcula, chips de mandioca crocante.</p>
+                                <span class="card-price">R$ 34,90</span>
                             </div>
-                            <span class="card-price">R$ 15,90</span>
-                        </div>
-
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Oreo com Cookies & Cream</span>
-                            </div>
-                            <span class="card-price">R$ 15,90</span>
                         </div>
                     </div>
-                </div>
+            </section>
 
-                <div class="bebida-categoria">
-                    <h3 class="categoria-title">Cervejas</h3>
+            <!-- Seção de Combos -->
 
+            <section id="combo-hamburguer-section" class="section cardapio">
+                <div class="container">
+                    <h2 class="section tittle">Combo Burguer's</h2>
                     <div class="cards-container">
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Corona</span>
+                        
+                        <div class="card">
+                            <div class="card-img combo-1"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Copacabana Combo</h3>
+                                <p class="card-description">Copacabana Burger + Batata frita + Refrigerante ou suco.</p>
+                                <span class="card-price">R$ 34,90</span>
                             </div>
-                            <span class="card-price">R$ 11,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Heineken</span>
+                        <div class="card">
+                            <div class="card-img combo-2"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Avenida Paulista Combo</h3>
+                                <p class="card-description">Avenida Paulista Burger + Batata rústica + Caipirinha ou refrigerante.</p>
+                                <span class="card-price">R$ 52,00</span>
                             </div>
-                            <span class="card-price">R$ 11,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Stella Artois</span>
+                        <div class="card">
+                            <div class="card-img combo-3"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Cataratas do Iguaçu Combo</h3>
+                                <p class="card-description">Cataratas Burger + Mandioca frita + Suco tropical.</p>
+                                <span class="card-price">R$ 56,00</span>
                             </div>
-                            <span class="card-price">R$ 11,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Budweiser</span>
+                        <div class="card">
+                            <div class="card-img combo-4"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Jardim Botânico Combo</h3>
+                                <p class="card-description">Jardim Botânico Burger + Chips de legumes + Suco natural.</p>
+                                <span class="card-price">R$ 48,90</span>
                             </div>
-                            <span class="card-price">R$ 11,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Colorado</span>
+                        <div class="card">
+                            <div class="card-img combo-5"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Congresso Nacional Combo</h3>
+                                <p class="card-description">Congresso Nacional Burger + Chips de batata-doce + Refrigerante ou suco.</p>
+                                <span class="card-price">R$ 57,00</span>
                             </div>
-                            <span class="card-price">R$ 11,90</span>
                         </div>
 
-                        <div class="card bebida-item">
-                            <div class="bebida-icone">
-                                <i class="fas fa-glass-whiskey"></i>
-                                <span class="bebida-nome">Antarctica Original</span>
+                        <div class="card">
+                            <div class="card-img combo-6"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Pelourinho Combo</h3>
+                                <p class="card-description">Pelourinho Burger + Chips de banana-da-terra + Suco de maracujá.</p>
+                                <span class="card-price">R$ 52,90</span>
                             </div>
-                            <span class="card-price">R$ 11,90</span>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-img combo-7"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Jericoacoara Combo</h3>
+                                <p class="card-description">Jericoacoara Burger + Chips de mandioca + Suco de caju.</p>
+                                <span class="card-price">R$ 55,00</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-img combo-8"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Lençóis Maranhenses Combo</h3>
+                                <p class="card-description">Lençóis Burger + Mandioca frita + Guaraná Jesus ou suco de cupuaçu.</p>
+                                <span class="card-price">R$ 50,90</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-img combo-9"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Monte Roraima Combo</h3>
+                                <p class="card-description">Monte Roraima Burger + Chips de banana pacovã + Suco de cupuaçu.</p>
+                                <span class="card-price">R$ 56,00</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-img combo-10"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Serra Gaúcha Combo</h3>
+                                <p class="card-description">Serra Gaúcha Burger + Chips de polenta + Suco de uva ou vinho da casa.</p>
+                                <span class="card-price">R$ 59,90</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-img combo-11"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Pantanal Combo</h3>
+                                <p class="card-description">Pantanal Burger (vegano) + Chips de mandioca crocante + Suco natural de manga ou limão.</p>
+                                <span class="card-price">R$ 52,90</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="card">
-                    <div class="card-img bebida-4"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Sucos</h3>
-                        <p class="card-description">Laranja, Limonada, Abacaxi, Maracujá, Manga, Abacaxi com hortelã, Uva, Cupuaçu, Goiaba e Acerola.</p>
-                        <span class="card-price">R$ 8,90</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img bebida-4"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Drinks</h3>
-                        <p class="card-description">Vinho, Mojito, Piña Colada, Negroni, Gin Tropical, Marguerita, Whisky Sour, Cosmopolitan, Aperol Spritz, Caipirinha.</p>
-                        <span class="card-price">R$ 20,90</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img bebida-5"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Bebidas Quentes</h3>
-                        <p class="card-description">Café expresso, Cappuccino.</p>
-                        <span class="card-price">R$ 6,90</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img bebida-5"></div>
-                    <div class="card-content">
-                        <h3 class="card-title">Água</h3>
-                        <p class="card-description">Água Mineral.</p>
-                        <span class="card-price">R$ 2,90</span>
-                    </div>
-                </div>
-            </div>
-        </section>  
-    
-        <section id="sobremesas-section" class="section cardapio">
-            <div class="container">
-                <h2 class="section tittle">Sobremesas</h2>
-                <div class="cards-container">
-
+            <section id="acompanhamentos-section" class="section cardapio">
+                <div class="container">
+                    <h2 class="section tittle">Acompanhamentos</h2>
+                    
                     <div class="card">
-                        <div class="card-img sobremesa-1"></div>
+                        <div class="card-img acompanhamento-1"></div>
                         <div class="card-content">
-                            <h3 class="card-title">Brownie com Sorvete</h3> 
-                            <p class="card-description">Brownie de chocolate meio amargo servido com sorvete de creme e calda de chocolate.</p>
-                            <span class="card-price">R$ 14,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img sobremesa-2"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Pudim</h3> 
-                            <p class="card-description">Pudim cremoso, suave e sem furinhos. Feito com Leite Condensado Moça, o famoso tradicional.</p>
-                            <span class="card-price">R$ 16,90</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img sobremesa-3"></div>
-                        <div class="card-content">
-                            <h3 class="card-title">Brownie de Brigadeiro no Pote</h3> 
-                            <p class="card-description">Camadas de brownie de chocolate meio amargo, brigadeiro, cobertura de chocolate e finalizado com granulado belga.</p>
-                            <span class="card-price">R$ 16,90</span>
+                            <h3 class="card-title">Onion Rings</h3>
+                            <p class="card-description">Cebolas cortadas em forma de anéis empanadas com uma leve camada de farinha de rosca e fritas em óleo bem quente.</p>
+                            <span class="card-price">R$ 21,93</span>  
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-img sobremesa-3"></div>
+                        <div class="card-img acompanhamento-2"></div>
                         <div class="card-content">
-                            <h3 class="card-title">Banoffe</h3> 
-                            <p class="card-description">Banoffe feita com um creme especial aveludado, fatias de bananas e uma deliciosa composta artesanal de banana cremosa.</p>
-                            <span class="card-price">R$ 16,90</span>
+                            <h3 class="card-title">Batata Rústica M</h3>
+                            <p class="card-description">Batatas com cascas temperadas com páprica picante e alecrim.</p>
+                            <span class="card-price">R$ 10,90</span>  
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img acompanhamento-3"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Batata Frita M</h3>
+                            <p class="card-description">Batatas fritas temperada com sal e alecrim.</p>
+                            <span class="card-price">R$ 9,90</span>  
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img acompanhamento-4"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Batata Rústicas G</h3>
+                            <p class="card-description">Um balde médio com batatas com cascas temperadas com páprica picante e alecrim.</p>
+                            <span class="card-price">R$ 17,90</span>  
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img acompanhamento-5"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Batata Frita G</h3>
+                            <p class="card-description">Um balde médio com batatas fritas temperada com sal e alecrim.</p>
+                            <span class="card-price">R$ 16,90</span>  
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img acompanhamento-6"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Batata Fritas Cheddar e Bacon</h3>
+                            <p class="card-description">Batata frita temperada com sal, com molho com queijo tipo cheddar e bacon crispy.</p>
+                            <span class="card-price">R$ 20,90</span>  
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img acompanhamento-6"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Mandioca Frita</h3>
+                            <p class="card-description">Mandioca frita temperada com sal.</p>
+                            <span class="card-price">R$ 18,90</span>  
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img acompanhamento-7"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Chicken Nuggets 8 unidades</h3>
+                            <p class="card-description">Frango crocante, leves e delicionos. Acompanhado pela maionese da casa.</p>
+                            <span class="card-price">R$ 15,90</span>  
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img acompanhamento-8"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Chicken Nuggets 12 unidades</h3>
+                            <p class="card-description">Frango crocante, leves e delicionos. Acompanhado pela maionese da casa.</p>
+                            <span class="card-price">R$ 23,90</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img entrada-9"></div>
+                        <div class="card-content">
+                            <h3 class="card-title">Chicken Nuggets 18 unidades</h3>
+                            <p class="card-description">Frango crocante, leves e delicionos. Acompanhado pela maionese da casa.</p>
+                            <span class="card-price">R$ 26,90</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    <script src="js/script.js"></script>
-</body>
+            </section>
+
+            <section id="bebidas-section" class="section cardapio">
+                <div class="container">
+                    <h2 class="categoria-title">Bebidas</h2>
+
+                    <div class="bebida-categoria">
+                        <h3 class="categoria-title">Refrigerantes</h3>
+
+                        <div class="cards-container">
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-refri-1"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Pepsi</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-refri-2"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Pepsi Black</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-refri-3"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Guaraná Antártica</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-refri-4"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Guaraná Antártica Zero</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-refri-5"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Soda Limonada</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-refri-6"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Coca-Cola</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-refri-7"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Coca-Cola Zero</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-refri-8"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Fanta Laranja</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-refri-9"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Fanta Uva</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bebida-categoria">
+                        <h3 class="categoria-title">Milkshakes</h3>
+
+                        <div class="cards-container">
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-1"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Chocolate</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-2"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Chocolate Belga</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-3"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Flocos</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-4"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Creme</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-5"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Leite Ninho</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-6"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Morango</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-7"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Banana com Canela</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-8"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Red Velvet</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-9"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caramelo Salgado</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-10"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Ninho com Nutella</h3>
+                                    <span class="card-price">R$ 21,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-11"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Brownie</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-milkshake-12"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Oreo com Cookies & Cream</h3>
+                                    <span class="card-price">R$ 15,90</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bebida-categoria">
+                        <h3 class="categoria-title">Cervejas</h3>
+
+                        <div class="cards-container">
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-1"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Corona</h3>
+                                    <span class="card-price">R$ 14,90</span>
+                                    <span class="card-volume">Long Neck 355ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-2"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Heineken</h3>
+                                    <span class="card-price">R$ 11,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-3"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Stella Artois</h3>
+                                    <span class="card-price">R$ 16,60</span>
+                                    <span class="card-volume">Long Neck 330ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-4"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Spaten</h3>
+                                    <span class="card-price">R$ 16,60</span>
+                                    <span class="card-volume">Long Neck 330ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-5"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Bohemia</h3>
+                                    <span class="card-price">R$ 13,70</span>
+                                    <span class="card-volume">Long Neck 355ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-6"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Budweiser</h3>
+                                    <span class="card-price">R$ 11,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-7"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Colorado</h3>
+                                    <span class="card-price">R$ 11,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-8"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Antarctica Original</h3>
+                                    <span class="card-price">R$ 22,10</span>
+                                    <span class="card-volume">Garrafa 600ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-9"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Brahma</h3>
+                                    <span class="card-price">R$ 14,90</span>
+                                    <span class="card-volume">Long Neck 355ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-10"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Chopp Brahma</h3>
+                                    <span class="card-price">R$ 15,70</span>
+                                    <span class="card-volume">Caneca 350ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-cerveja-11"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Chopp Black Brahma</h3>
+                                    <span class="card-price">R$ 16,70</span>
+                                    <span class="card-volume">Caneca 350ml</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bebida-categoria">
+                        <h3 class="categoria-title">Sucos</h3>
+
+                        <div class="cards-container">
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-1"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Laranja</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-2"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Limonada</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-3"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Abacaxi</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-4"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Maracujá</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-5"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Manga</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-6"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Abacaxi com hortelã</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-7"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Uva Integral</h3>
+                                    <span class="card-price">R$ 20,00</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 31,40</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-8"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Cupuaçu</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-9"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Goiaba</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-10"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Acerola</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-suco-11"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caju</h3>
+                                    <span class="card-price">R$ 14,60</span>
+                                    <span class="card-volume">Copo 300ml</span>
+                                    <span class="card-price">R$ 25,10</span>
+                                    <span class="card-volume">Copo 500ml</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="bebida-categoria">
+                        <h3 class="categoria-title">Drinks</h3>
+
+                        <div class="cards-container">
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-1"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Piña Colada</h3>
+                                    <span class="card-price">R$ 31,40</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-2"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Negroni</h3>
+                                    <span class="card-price">R$ 35,60</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-3"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Moscow Mule</h3>
+                                    <span class="card-price">R$ 35,60</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-4"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Gin Tropical</h3>
+                                    <span class="card-price">R$ 35,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-5"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Marguerita</h3>
+                                    <span class="card-price">R$ 33,60</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-6"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Whisky Sour</h3>
+                                    <span class="card-price">R$ 20,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-7"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Cosmopolitan</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-8"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Aperol Spritz</h3>
+                                    <span class="card-price">R$ 36,70</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-9"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Bloody Mary</h3>
+                                    <span class="card-price">R$ 36,70</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-10"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Mojito</h3>
+                                    <span class="card-price">R$ 31,40</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-11"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Blue Mojito</h3>
+                                    <span class="card-price">R$ 30,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-12"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Acerola Martini</h3>
+                                    <span class="card-price">R$ 31,40</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-13"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Aperol Mule</h3>
+                                    <span class="card-price">R$ 53,60</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-14"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Limoncello Spritz</h3>
+                                    <span class="card-price">R$ 45,20</span>
+                                </div>
+                            </div>
+
+                            <!-- Caipirinhas -->
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-15"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Maracujá</h3>
+                                    <span class="card-price">R$ 36,70</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-16"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Abacaxi</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-17"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Banana</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-18"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Coco</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-19"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Kiwi</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-20"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Limão</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-21"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Morango</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-22"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Melancia</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-23"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Maçã Verde</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-24"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha de Manga</h3>
+                                    <span class="card-price">R$ 33,50</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-drink-25"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Caipirinha Gourmet</h3>
+                                    <span class="card-price">R$ 35,50</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bebida-categoria">
+                        <h3 class="categoria-title">Outras Bebidas</h3>
+
+                        <div class="cards-container">
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-outra-1"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Café Expresso</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-outra-2"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Cappuccino</h3>
+                                    <span class="card-price">R$ 6,90</span>
+                                </div>
+                            </div>
+                            
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-outra-3"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Água Mineral sem gás</h3>
+                                    <span class="card-price">R$ 4,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-outra-4"></div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Água Mineral com gás</h3>
+                                    <span class="card-price">R$ 5,90</span>
+                                </div>
+                            </div>
+
+                            <div class="card bebida-item">
+                                <div class="card-img bebida-outra-5"></div>
+                                <div class="card-content">
+                                    <span class="bebida-nome">Vinho</span>
+                                <span class="card-price">R$ 120,90</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                 
+                </div>
+            </section>
+        
+            <section id="sobremesas-section" class="section cardapio">
+                <div class="container">
+                    <h2 class="section tittle">Sobremesas</h2>
+                    <div class="cards-container">
+
+                        <div class="card">
+                            <div class="card-img sobremesa-1"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Brownie com Sorvete</h3> 
+                                <p class="card-description">Brownie de chocolate meio amargo servido com sorvete de creme e calda de chocolate.</p>
+                                <span class="card-price">R$ 14,90</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-img sobremesa-2"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Pudim</h3> 
+                                <p class="card-description">Pudim cremoso, suave e sem furinhos. Feito com Leite Condensado Moça, o famoso tradicional.</p>
+                                <span class="card-price">R$ 16,90</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-img sobremesa-3"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Brownie de Brigadeiro no Pote</h3> 
+                                <p class="card-description">Camadas de brownie de chocolate meio amargo, brigadeiro, cobertura de chocolate e finalizado com granulado belga.</p>
+                                <span class="card-price">R$ 16,90</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-img sobremesa-3"></div>
+                            <div class="card-content">
+                                <h3 class="card-title">Banoffe</h3> 
+                                <p class="card-description">Banoffe feita com um creme especial aveludado, fatias de bananas e uma deliciosa composta artesanal de banana cremosa.</p>
+                                <span class="card-price">R$ 16,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="js/script.js"></script>
+    </body>
 </html>

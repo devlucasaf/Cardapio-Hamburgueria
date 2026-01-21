@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (original.includes('Combo')) short = 'Combos';
         else if (original.includes('Acompanhamentos')) short = 'Acomp.';
-        else if (original.includes('Sobremesas')) short = 'Doces';
+        else if (original.includes('Sobremesas')) short = 'Sobremesas';
         else if (original.includes('Bebidas')) short = 'Bebidas';
         else if (original.includes('Burguer')) short = 'Burgers';
         else if (original.includes('Entradas')) short = 'Entradas';
