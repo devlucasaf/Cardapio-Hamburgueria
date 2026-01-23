@@ -1,24 +1,29 @@
-// AGUARDAR DOM COMPLETAMENTE CARREGADO
+// Espero o DOM carregar completamente antes de rodar qualquer coisa
 document.addEventListener('DOMContentLoaded', function () {
   console.log('✅ Durrr Burger JS Iniciado');
 
+  // Pego os elementos do menu (botão e navegação)
   const menuToggle = document.querySelector('.menu-toggle');
   const menuNav = document.querySelector('.menu-nav');
 
+  // Se existir o botão e o menu, adiciono o clique para abrir/fechar
   if (menuToggle && menuNav) {
     menuToggle.addEventListener('click', function () {
-      menuNav.classList.toggle('active');
+      menuNav.classList.toggle('active'); // alterna o menu aberto/fechado
       const icon = this.querySelector('i');
       if (icon) {
+        // alterna o ícone entre "hamburger" e "X"
         icon.classList.toggle('fa-bars');
         icon.classList.toggle('fa-times');
       }
     });
   }
 
+  // Links de navegação e seções da página
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.section');
 
+  // Função para resetar os estilos dos links
   function resetNavLinks() {
     navLinks.forEach((link) => {
       link.classList.remove('active', 'current');
@@ -26,18 +31,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Ativa o link clicado ou correspondente à seção atual
   function activateLink(linkToActivate) {
     if (!linkToActivate) return;
     resetNavLinks();
     linkToActivate.classList.add('active', 'current');
   }
 
+  // Fecha o menu mobile se estiver aberto
   function closeMobileMenuIfOpen() {
     if (!menuNav || !menuToggle) return;
 
     if (menuNav.classList.contains('active')) {
       menuNav.classList.remove('active');
-
       const icon = menuToggle.querySelector('i');
       if (icon) {
         icon.classList.add('fa-bars');
@@ -46,31 +52,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  // Faz o scroll suave até a seção desejada
   function scrollToTarget(targetSelector) {
     if (!targetSelector || !targetSelector.startsWith('#')) return;
     const targetElement = document.querySelector(targetSelector);
     if (!targetElement) return;
 
     window.scrollTo({
-      top: targetElement.offsetTop - 80,
+      top: targetElement.offsetTop - 80, // ajusto o offset por causa do header
       behavior: 'smooth',
     });
   }
 
+  // Quando clico em um link do menu
   navLinks.forEach((link) => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
-
       const targetId = this.getAttribute('href');
-
       activateLink(this);
-
       closeMobileMenuIfOpen();
-
       scrollToTarget(targetId);
     });
   });
 
+  // Destaca o link conforme a rolagem da página
   function highlightOnScroll() {
     let current = '';
     const scrollPos = window.scrollY + 100;
@@ -91,27 +96,23 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   window.addEventListener('scroll', highlightOnScroll);
+  highlightOnScroll(); // já chama uma vez pra iniciar
 
-  highlightOnScroll();
-
+  // Botão "Ver Cardápio" que leva direto para a seção de hambúrgueres
   const btnVerCardapio = document.querySelector('.btn');
   if (btnVerCardapio) {
     btnVerCardapio.addEventListener('click', function (e) {
       e.preventDefault();
-
       const target = '#hamburguer-section';
-
       const linkBurguer = document.querySelector(`.nav-link[href="${target}"]`);
       if (linkBurguer) activateLink(linkBurguer);
-
       scrollToTarget(target);
-
       closeMobileMenuIfOpen();
     });
   }
 
+  // Animação dos cards com IntersectionObserver
   const cards = document.querySelectorAll('.card');
-
   if (cards.length > 0 && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -127,19 +128,19 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
     cards.forEach((card) => {
+      // estado inicial dos cards
       card.style.opacity = '0';
       card.style.transform = 'translateY(30px)';
       card.style.transition = 'opacity 0.6s, transform 0.6s';
       observer.observe(card);
 
+      // animações extras ao passar o mouse
       card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-10px)';
       });
-
       card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0)';
       });
-
       card.addEventListener('click', function () {
         this.style.transform = 'scale(0.95)';
         setTimeout(() => {
@@ -149,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Ajusta o texto do menu dependendo da largura da tela
   function adjustMenuText() {
     const screenWidth = window.innerWidth;
     const navItems = document.querySelectorAll('.menu-nav a');
@@ -181,6 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   console.log('✅ JavaScript configurado com sucesso!');
 
+  // Estilos extras para destacar o link ativo com animação
   const style = document.createElement('style');
   style.innerHTML = `
     .menu-nav a.current,
