@@ -1,4 +1,18 @@
-/* Reset e configurações básicas */
+/* 
+    COMENTÁRIOS DO CÓDIGO CSS
+    ==========================================
+    Este é um CSS completo e sofisticado para um site de cardápio de hamburgueria.
+    Abaixo estão comentários explicativos sobre cada seção principal.
+*/
+
+/* RESET E CONFIGURAÇÕES BÁSICAS 
+    ------------------------------------------
+    - Reset universal para zerar margens/padding e usar box-sizing: border-box
+    - Variáveis CSS (custom properties) definidas no :root para consistência
+    - Cores, gradientes, sombras e bordas radius pré-definidas
+    - Configuração de smooth scroll no html
+    - Body com fundo escuro gradiente e font-family Poppins
+*/
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +20,7 @@
 }
 
 :root {
+    /* Paleta de cores principal */
     --primary: #FF6B00;
     --primary-dark: #E65100;
     --secondary: #00B0FF;
@@ -17,15 +32,18 @@
     --gray: #757575;
     --success: #00E676;
     
+    /* Gradientes */
     --gradient-primary: linear-gradient(135deg, var(--primary), var(--accent));
     --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--accent-light));
     --gradient-dark: linear-gradient(135deg, var(--dark), #424242);
     
+    /* Sistema de sombras */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.3);
     --shadow-glow: 0 0 15px rgba(255, 107, 0, 0.5);
     
+    /* Sistema de bordas arredondadas */
     --border-radius-sm: 8px;
     --border-radius-md: 12px;
     --border-radius-lg: 20px;
@@ -42,12 +60,20 @@ body {
     color: var(--light);
     line-height: 1.6;
     overflow-x: hidden;
+    /* Efeito de background com gradientes radiais */
     background-image: 
         radial-gradient(circle at 25% 25%, rgba(255, 107, 0, 0.1) 0%, transparent 55%),
         radial-gradient(circle at 75% 75%, rgba(0, 176, 255, 0.1) 0%, transparent 55%);
     background-attachment: fixed;
 }
 
+/* HEADER 
+    ------------------------------------------
+    - Header sticky com gradiente escuro
+    - Layout flexbox para logo e navegação
+    - Navegação com efeitos hover e estado active
+    - Menu toggle para mobile (display: none no desktop)
+*/
 header {
     background: var(--gradient-dark);
     padding: 1rem 0;
@@ -70,6 +96,7 @@ header .container {
 .logo h1 {
     font-family: 'Fredoka One', cursive;
     font-size: 2.2rem;
+    /* Efeito de texto com gradiente */
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
@@ -149,6 +176,13 @@ header .container {
     transform: scale(1.05);
 }
 
+/* SEÇÕES PRINCIPAIS 
+    ------------------------------------------
+    - Estrutura consistente para todas as seções
+    - Seção de início com banner hero
+    - Títulos estilizados com pseudo-elementos
+    - Sistema de cards responsivo com grid
+*/
 .section {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -205,6 +239,12 @@ header .container {
     margin-right: auto;
 }
 
+/* BOTÕES 
+    ------------------------------------------
+    - Estilo consistente para botões primários
+    - Efeitos de hover, active e foco
+    - Gradiente e sombras
+*/
 .btn {
     display: inline-block;
     background: var(--gradient-primary);
@@ -233,6 +273,11 @@ header .container {
     transform: translateY(-1px);
 }
 
+/* TÍTULOS DAS SEÇÕES 
+    ------------------------------------------
+    - Estilo consistente para títulos de seção
+    - Linha decorativa com pseudo-elemento
+*/
 .section-title {
     font-family: 'Fredoka One', cursive;
     font-size: 2.8rem;
@@ -254,6 +299,13 @@ header .container {
     border-radius: 2px;
 }
 
+/* SISTEMA DE CARDS 
+    ------------------------------------------
+    - Grid responsivo para cards de produtos
+    - Efeitos hover sofisticados
+    - Estrutura com imagem e conteúdo
+    - Preços e descrições estilizados
+*/
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -287,7 +339,7 @@ header .container {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-
+    /* Fallback pattern para quando não há imagem */
     background-color: #5D4037;
     background-image: 
         linear-gradient(45deg, 
@@ -374,6 +426,12 @@ header .container {
     transform: scaleX(1);
 }
 
+/* CATEGORIAS DE PRODUTOS 
+    ------------------------------------------
+    - Organização por categorias (entradas, hambúrgueres, etc.)
+    - Títulos de categoria estilizados
+    - Separadores visuais entre categorias
+*/
 .bebida-categoria {
     margin-bottom: 3rem;
 }
@@ -404,6 +462,13 @@ header .container {
 .bebida-categoria:last-child::after {
     display: none;
 }
+
+/* SEÇÕES DE IMAGENS ESPECÍFICAS 
+    ------------------------------------------
+    - Classes para cada produto com background-image específico
+    - Organizadas por categorias: entradas, hambúrgueres, combos, etc.
+    - Caminhos para assets organizados
+*/
 
 /* Seção de Entradas */
 .entrada-1 { 
@@ -854,6 +919,11 @@ header .container {
     background-image: url('../assets/bebidas/outras/agua-com-gas.png'); 
 }
 
+/* FALLBACKS PARA IMAGENS AUSENTES 
+    ------------------------------------------
+    - Emojis como fallback quando images não carregam
+    - Diferentes emojis por categoria de produto
+*/
 .card-img:empty::before,
 .card-img[style*="background-image: none"]::before,
 .card-img:not([style*="background-image"])::before {
@@ -903,6 +973,12 @@ header .container {
     content: '☕'; 
 }
 
+/* FOOTER 
+    ------------------------------------------
+    - Estilo consistente com header
+    - Links sociais com efeitos hover
+    - Informações de contato/rodapé
+*/
 footer {
     background: var(--gradient-dark);
     padding: 3rem 2rem;
@@ -962,6 +1038,13 @@ footer {
     box-shadow: var(--shadow-glow);
 }
 
+/* ANIMAÇÕES E EFEITOS 
+    ------------------------------------------
+    - Animações para scroll suave
+    - Efeitos de entrada para cards
+    - Animações de pulse e float
+    - Efeito de highlight para promoções
+*/
 @keyframes pulse-glow {
     0% { 
         box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7); 
@@ -1013,6 +1096,11 @@ footer {
     animation-delay: 0.5s; 
 }
 
+/* SCROLLBAR PERSONALIZADA 
+    ------------------------------------------
+    - Estilização da scrollbar para combinar com o tema
+    - Gradiente e bordas arredondadas
+*/
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -1032,6 +1120,11 @@ footer {
     background: var(--primary-dark);
 }
 
+/* ELEMENTOS DECORATIVOS 
+    ------------------------------------------
+    - Pontos flutuantes para background
+    - Animações de float
+*/
 .decorative-dots {
     position: absolute;
     width: 100%;
@@ -1088,6 +1181,11 @@ footer {
     50% { transform: translateY(-10px); }
 }
 
+/* INDICADOR DE PÁGINA ATIVA 
+    ------------------------------------------
+    - Ponto animado no menu ativo
+    - Efeito de pulse
+*/
 .menu-nav a.active::before {
     content: '';
     position: absolute;
@@ -1116,6 +1214,12 @@ footer {
     }
 }
 
+/* BOTÃO VOLTAR AO TOPO 
+    ------------------------------------------
+    - Botão flutuante fixo
+    - Visibilidade controlada por JS
+    - Efeitos hover
+*/
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -1148,6 +1252,11 @@ footer {
     box-shadow: var(--shadow-glow);
 }
 
+/* ESTADOS DE CARREGAMENTO 
+    ------------------------------------------
+    - Efeito de loading para imagens
+    - Animação de gradiente deslizante
+*/
 .card-img.loading {
     background: linear-gradient(90deg, #5D4037 25%, #6D4C41 50%, #5D4037 75%);
     background-size: 200% 100%;
@@ -1163,6 +1272,11 @@ footer {
     }
 }
 
+/* DESTAQUE PARA PROMOÇÕES 
+    ------------------------------------------
+    - Borda e animação especial
+    - Selo "PROMOÇÃO" rotacionado
+*/
 .card.highlight {
     border: 2px solid var(--accent);
     animation: highlight-pulse 2s infinite;
@@ -1191,6 +1305,16 @@ footer {
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+
+/* MEDIA QUERIES - RESPONSIVIDADE 
+    ==========================================
+    Breakpoints:
+    - 1200px: Ajustes para telas menores que desktop grande
+    - 992px: Tablets landscape
+    - 768px: Tablets portrait e mobile large
+    - 576px: Mobile medium
+    - 400px: Mobile small
+*/
 
 @media (max-width: 1200px) {
     .section {
@@ -1234,6 +1358,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Menu mobile - transformação para hamburger */
     .menu-nav {
         display: none;
         position: fixed;
@@ -1271,6 +1396,7 @@ footer {
         display: block;
     }
     
+    /* Ajustes de layout para mobile */
     .cards-container {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 1.5rem;
@@ -1419,6 +1545,12 @@ footer {
     }
 }
 
+/* CLASSES UTILITÁRIAS 
+    ------------------------------------------
+    - Para controle de visibilidade
+    - Para alinhamento de texto
+    - Espaçamentos consistentes
+*/
 .hidden {
     display: none !important;
 }
@@ -1443,6 +1575,11 @@ footer {
     text-align: right;
 }
 
+/* SISTEMA DE ESPAÇAMENTO 
+    ------------------------------------------
+    - Margin top e bottom classes
+    - Baseado em rem para escalabilidade
+*/
 .mt-1 { 
     margin-top: 0.5rem; 
 }
