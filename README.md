@@ -14,12 +14,21 @@ Este projeto foi desenvolvido para fornecer uma experiência digital aos cliente
 # 🗃️ Estrutura
 
 ```
-/Portifolio
+/Cardapio-Hamburgueria
   ├── index.html
   ├── css/
   │   └── style.css
   ├── js/
   │   └── script.js
+  ├── assets/
+  │   ├── acompanhamentos/
+  │   ├── bebidas/
+  │   │   ├── cervejas/
+  │   │   ├── refrigerantes/
+  │   │   └── sucos/
+  │   ├── combos/
+  │   ├── hamburgueres/
+  │   └── sobremesas/
   └── README.md
 ```
 
@@ -60,8 +69,8 @@ Este projeto foi desenvolvido para fornecer uma experiência digital aos cliente
     />
     <img
         align="center"
-        alt="VsCode"
-        tittle="VsCode"
+        alt="github"
+        tittle="GitHub"
         height="40" 
         style="padding-right: 10px;" 
         src="https://skillicons.dev/icons?i=github"
