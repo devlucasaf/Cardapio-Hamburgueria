@@ -32,13 +32,19 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function activateLink(linkToActivate) {
-    if (!linkToActivate) return;
+    if (!linkToActivate) {
+      return;
+    }
+    
     resetNavLinks();
     linkToActivate.classList.add('active', 'current');
   }
 
   function closeMobileMenuIfOpen() {
-    if (!menuNav || !menuToggle) return;
+    if (!menuNav || !menuToggle) {
+      return;
+    }
+
     if (menuNav.classList.contains('active')) {
       menuNav.classList.remove('active');
       const icon = menuToggle.querySelector('i');
@@ -50,9 +56,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function scrollToTarget(targetSelector) {
-    if (!targetSelector || !targetSelector.startsWith('#')) return;
+    if (!targetSelector || !targetSelector.startsWith('#')) {
+      return;
+    }
+
     const targetElement = document.querySelector(targetSelector);
-    if (!targetElement) return;
+
+    if (!targetElement) {
+      return;
+    }
 
     window.scrollTo({
       top: targetElement.offsetTop - 80,
@@ -82,9 +94,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    if (!current) return;
+    if (!current) {
+      return;
+    }
+
     const active = document.querySelector(`.nav-link[href="#${current}"]`);
-    if (active) activateLink(active);
+    if (active) {
+      activateLink(active);
+    }
   }
 
   window.addEventListener('scroll', highlightOnScroll);
@@ -99,7 +116,11 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       const target = '#hamburguer-section';
       const linkBurguer = document.querySelector(`.nav-link[href="${target}"]`);
-      if (linkBurguer) activateLink(linkBurguer);
+      
+      if (linkBurguer) {
+        activateLink(linkBurguer);
+      }
+
       scrollToTarget(target);
       closeMobileMenuIfOpen();
     });
@@ -156,13 +177,27 @@ document.addEventListener('DOMContentLoaded', function () {
         const original = item.getAttribute('data-long') || item.textContent;
         let short = original;
 
-        if (original.includes('Combo')) short = 'Combos';
-        else if (original.includes('Acompanhamentos')) short = 'Acomp.';
-        else if (original.includes('Sobremesas')) short = 'Sobremesas';
-        else if (original.includes('Bebidas')) short = 'Bebidas';
-        else if (original.includes('Burguer')) short = 'Burgers';
-        else if (original.includes('Entradas')) short = 'Entradas';
-        else if (original === 'Início') short = 'Início';
+        if (original.includes('Combo')) {
+          short = 'Combos';
+        } 
+        else if (original.includes('Acompanhamentos')) {
+          short = 'Acomp.';
+        } 
+        else if (original.includes('Sobremesas')) {
+          short = 'Sobremesas';
+        } 
+        else if (original.includes('Bebidas')) {
+          short = 'Bebidas';
+        } 
+        else if (original.includes('Burguer')) {
+          short = 'Burgers';
+        } 
+        else if (original.includes('Entradas')) {
+          short = 'Entradas';
+        } 
+        else if (original === 'Início') {
+          short = 'Início';
+        }
 
         item.textContent = short;
       });
