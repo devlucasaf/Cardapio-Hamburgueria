@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('✅ Durrr Burger JS Iniciado');
+  console.log('Durrr Burger JS Iniciado');
 
-  /* ========================================================================== 
-      CONTROLE DO MENU MOBILE 
-  ========================================================================== */
+  /* CONTROLE DO MENU MOBILE  */
   const menuToggle = document.querySelector('.menu-toggle');
   const menuNav = document.querySelector('.menu-nav');
 
@@ -18,9 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ========================================================================== 
-      NAVEGAÇÃO E SCROLL SPY 
-  ========================================================================== */
+  /* NAVEGAÇÃO E SCROLL SPY  */
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('.section');
 
@@ -107,9 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', highlightOnScroll);
   highlightOnScroll();
 
-  /* ========================================================================== 
-      BOTÕES DE AÇÃO (CTA) 
-  ========================================================================== */
+  /* BOTÕES DE AÇÃO  */
   const btnVerCardapio = document.querySelector('.btn');
   if (btnVerCardapio) {
     btnVerCardapio.addEventListener('click', function (e) {
@@ -126,9 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ========================================================================== 
-      ANIMAÇÕES DOS CARDS (Intersection Observer) 
-  ========================================================================== */
+  /* ANIMAÇÕES DOS CARDS  */
   const cards = document.querySelectorAll('.card');
   if (cards.length > 0 && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
@@ -165,9 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ========================================================================== 
-      AJUSTES DE RESPONSIVIDADE (TEXTO DO MENU) 
-  ========================================================================== */
+  /* AJUSTES DE RESPONSIVIDADE  */
   function adjustMenuText() {
     const screenWidth = window.innerWidth;
     const navItems = document.querySelectorAll('.menu-nav a');
@@ -179,23 +169,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (original.includes('Combo')) {
           short = 'Combos';
-        } 
-        else if (original.includes('Acompanhamentos')) {
+        } else if (original.includes('Acompanhamentos')) {
           short = 'Acomp.';
-        } 
-        else if (original.includes('Sobremesas')) {
+        } else if (original.includes('Sobremesas')) {
           short = 'Sobremesas';
-        } 
-        else if (original.includes('Bebidas')) {
+        } else if (original.includes('Bebidas')) {
           short = 'Bebidas';
-        } 
-        else if (original.includes('Burguer')) {
+        } else if (original.includes('Burguer')) {
           short = 'Burgers';
-        } 
-        else if (original.includes('Entradas')) {
+        } else if (original.includes('Entradas')) {
           short = 'Entradas';
-        } 
-        else if (original === 'Início') {
+        } else if (original === 'Início') {
           short = 'Início';
         }
 
@@ -212,11 +196,9 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('load', adjustMenuText);
   window.addEventListener('resize', adjustMenuText);
 
-  console.log('✅ JavaScript configurado com sucesso!');
+  console.log('JavaScript configurado com sucesso!');
 
-  /* ========================================================================== 
-      INJEÇÃO DE ESTILOS DINÂMICOS 
-  ========================================================================== */
+  /* INJEÇÃO DE ESTILOS DINÂMICOS  */
   const style = document.createElement('style');
   style.innerHTML = `
     .menu-nav a.current,
@@ -238,9 +220,11 @@ document.addEventListener('DOMContentLoaded', function () {
       0% { 
         box-shadow: 0 0 15px rgba(255, 107, 0, 0.7); 
       }
+
       50% { 
         box-shadow: 0 0 30px rgba(255, 107, 0, 0.9); 
       }
+
       100% {
         box-shadow: 0 0 15px rgba(255, 107, 0, 0.7); 
       }

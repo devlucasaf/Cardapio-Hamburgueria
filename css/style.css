@@ -1,18 +1,3 @@
-/* 
-    COMENTÁRIOS DO CÓDIGO CSS
-    ==========================================
-    Este é um CSS completo e sofisticado para um site de cardápio de hamburgueria.
-    Abaixo estão comentários explicativos sobre cada seção principal.
-*/
-
-/* RESET E CONFIGURAÇÕES BÁSICAS 
-    ------------------------------------------
-    - Reset universal para zerar margens/padding e usar box-sizing: border-box
-    - Variáveis CSS (custom properties) definidas no :root para consistência
-    - Cores, gradientes, sombras e bordas radius pré-definidas
-    - Configuração de smooth scroll no html
-    - Body com fundo escuro gradiente e font-family Poppins
-*/
 * {
     margin: 0;
     padding: 0;
@@ -67,13 +52,7 @@ body {
     background-attachment: fixed;
 }
 
-/* HEADER 
-    ------------------------------------------
-    - Header sticky com gradiente escuro
-    - Layout flexbox para logo e navegação
-    - Navegação com efeitos hover e estado active
-    - Menu toggle para mobile (display: none no desktop)
-*/
+/* HEADER */
 header {
     background: var(--gradient-dark);
     padding: 1rem 0;
@@ -176,13 +155,7 @@ header .container {
     transform: scale(1.05);
 }
 
-/* SEÇÕES PRINCIPAIS 
-    ------------------------------------------
-    - Estrutura consistente para todas as seções
-    - Seção de início com banner hero
-    - Títulos estilizados com pseudo-elementos
-    - Sistema de cards responsivo com grid
-*/
+/* SEÇÕES PRINCIPAIS */
 .section {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -239,12 +212,7 @@ header .container {
     margin-right: auto;
 }
 
-/* BOTÕES 
-    ------------------------------------------
-    - Estilo consistente para botões primários
-    - Efeitos de hover, active e foco
-    - Gradiente e sombras
-*/
+/* BOTÕES */
 .btn {
     display: inline-block;
     background: var(--gradient-primary);
@@ -273,11 +241,7 @@ header .container {
     transform: translateY(-1px);
 }
 
-/* TÍTULOS DAS SEÇÕES 
-    ------------------------------------------
-    - Estilo consistente para títulos de seção
-    - Linha decorativa com pseudo-elemento
-*/
+/* TÍTULOS DAS SEÇÕES */
 .section-title {
     font-family: 'Fredoka One', cursive;
     font-size: 2.8rem;
@@ -299,13 +263,7 @@ header .container {
     border-radius: 2px;
 }
 
-/* SISTEMA DE CARDS 
-    ------------------------------------------
-    - Grid responsivo para cards de produtos
-    - Efeitos hover sofisticados
-    - Estrutura com imagem e conteúdo
-    - Preços e descrições estilizados
-*/
+/* SISTEMA DE CARDS */
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -426,12 +384,7 @@ header .container {
     transform: scaleX(1);
 }
 
-/* CATEGORIAS DE PRODUTOS 
-    ------------------------------------------
-    - Organização por categorias (entradas, hambúrgueres, etc.)
-    - Títulos de categoria estilizados
-    - Separadores visuais entre categorias
-*/
+/* CATEGORIAS DE PRODUTOS */
 .bebida-categoria {
     margin-bottom: 3rem;
 }
@@ -463,12 +416,7 @@ header .container {
     display: none;
 }
 
-/* SEÇÕES DE IMAGENS ESPECÍFICAS 
-    ------------------------------------------
-    - Classes para cada produto com background-image específico
-    - Organizadas por categorias: entradas, hambúrgueres, combos, etc.
-    - Caminhos para assets organizados
-*/
+/* SEÇÕES DE IMAGENS ESPECÍFICAS */
 
 /* Seção de Entradas */
 .entrada-1 { 
@@ -919,11 +867,7 @@ header .container {
     background-image: url('../assets/bebidas/outras/agua-com-gas.png'); 
 }
 
-/* FALLBACKS PARA IMAGENS AUSENTES 
-    ------------------------------------------
-    - Emojis como fallback quando images não carregam
-    - Diferentes emojis por categoria de produto
-*/
+/* FALLBACKS PARA IMAGENS AUSENTES */
 .card-img:empty::before,
 .card-img[style*="background-image: none"]::before,
 .card-img:not([style*="background-image"])::before {
@@ -973,12 +917,7 @@ header .container {
     content: '☕'; 
 }
 
-/* FOOTER 
-    ------------------------------------------
-    - Estilo consistente com header
-    - Links sociais com efeitos hover
-    - Informações de contato/rodapé
-*/
+/* FOOTER */
 footer {
     background: var(--gradient-dark);
     padding: 3rem 2rem;
@@ -1038,20 +977,16 @@ footer {
     box-shadow: var(--shadow-glow);
 }
 
-/* ANIMAÇÕES E EFEITOS 
-    ------------------------------------------
-    - Animações para scroll suave
-    - Efeitos de entrada para cards
-    - Animações de pulse e float
-    - Efeito de highlight para promoções
-*/
+/* ANIMAÇÕES E EFEITOS */
 @keyframes pulse-glow {
     0% { 
         box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7); 
     }
+
     70% { 
         box-shadow: 0 0 0 10px rgba(255, 107, 0, 0); 
     }
+
     100% { 
         box-shadow: 0 0 0 0 rgba(255, 107, 0, 0); 
     }
@@ -1066,6 +1001,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1096,11 +1032,7 @@ footer {
     animation-delay: 0.5s; 
 }
 
-/* SCROLLBAR PERSONALIZADA 
-    ------------------------------------------
-    - Estilização da scrollbar para combinar com o tema
-    - Gradiente e bordas arredondadas
-*/
+/* SCROLLBAR PERSONALIZADA */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -1120,11 +1052,7 @@ footer {
     background: var(--primary-dark);
 }
 
-/* ELEMENTOS DECORATIVOS 
-    ------------------------------------------
-    - Pontos flutuantes para background
-    - Animações de float
-*/
+/* ELEMENTOS DECORATIVOS */
 .decorative-dots {
     position: absolute;
     width: 100%;
@@ -1181,11 +1109,7 @@ footer {
     50% { transform: translateY(-10px); }
 }
 
-/* INDICADOR DE PÁGINA ATIVA 
-    ------------------------------------------
-    - Ponto animado no menu ativo
-    - Efeito de pulse
-*/
+/* INDICADOR DE PÁGINA ATIVA */
 .menu-nav a.active::before {
     content: '';
     position: absolute;
@@ -1214,12 +1138,7 @@ footer {
     }
 }
 
-/* BOTÃO VOLTAR AO TOPO 
-    ------------------------------------------
-    - Botão flutuante fixo
-    - Visibilidade controlada por JS
-    - Efeitos hover
-*/
+/* BOTÃO VOLTAR AO TOPO */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -1252,11 +1171,7 @@ footer {
     box-shadow: var(--shadow-glow);
 }
 
-/* ESTADOS DE CARREGAMENTO 
-    ------------------------------------------
-    - Efeito de loading para imagens
-    - Animação de gradiente deslizante
-*/
+/* ESTADOS DE CARREGAMENTO */
 .card-img.loading {
     background: linear-gradient(90deg, #5D4037 25%, #6D4C41 50%, #5D4037 75%);
     background-size: 200% 100%;
@@ -1272,11 +1187,7 @@ footer {
     }
 }
 
-/* DESTAQUE PARA PROMOÇÕES 
-    ------------------------------------------
-    - Borda e animação especial
-    - Selo "PROMOÇÃO" rotacionado
-*/
+/* DESTAQUE PARA PROMOÇÕES */
 .card.highlight {
     border: 2px solid var(--accent);
     animation: highlight-pulse 2s infinite;
@@ -1286,6 +1197,7 @@ footer {
     0%, 100% { 
         box-shadow: 0 0 0 0 rgba(255, 214, 0, 0.4); 
     }
+
     50% { 
         box-shadow: 0 0 0 10px rgba(255, 214, 0, 0); 
     }
@@ -1306,15 +1218,7 @@ footer {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* MEDIA QUERIES - RESPONSIVIDADE 
-    ==========================================
-    Breakpoints:
-    - 1200px: Ajustes para telas menores que desktop grande
-    - 992px: Tablets landscape
-    - 768px: Tablets portrait e mobile large
-    - 576px: Mobile medium
-    - 400px: Mobile small
-*/
+/* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
     .section {
@@ -1545,12 +1449,7 @@ footer {
     }
 }
 
-/* CLASSES UTILITÁRIAS 
-    ------------------------------------------
-    - Para controle de visibilidade
-    - Para alinhamento de texto
-    - Espaçamentos consistentes
-*/
+/* CLASSES UTILITÁRIAS */
 .hidden {
     display: none !important;
 }
@@ -1575,11 +1474,7 @@ footer {
     text-align: right;
 }
 
-/* SISTEMA DE ESPAÇAMENTO 
-    ------------------------------------------
-    - Margin top e bottom classes
-    - Baseado em rem para escalabilidade
-*/
+/* SISTEMA DE ESPAÇAMENTO */
 .mt-1 { 
     margin-top: 0.5rem; 
 }
