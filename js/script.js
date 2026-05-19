@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (menuToggle && menuNav) {
     menuToggle.addEventListener('click', function () {
       menuNav.classList.toggle('active');
+      const isExpanded = menuNav.classList.contains('active');
+      this.setAttribute('aria-expanded', isExpanded);
+      this.setAttribute('aria-label', isExpanded ? 'Fechar menu' : 'Abrir menu');
       const icon = this.querySelector('i');
       if (icon) {
         icon.classList.toggle('fa-bars');
@@ -43,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (menuNav.classList.contains('active')) {
       menuNav.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menu');
       const icon = menuToggle.querySelector('i');
       if (icon) {
         icon.classList.add('fa-bars');

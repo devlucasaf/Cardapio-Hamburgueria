@@ -266,7 +266,7 @@ header .container {
 /* SISTEMA DE CARDS */
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -293,7 +293,7 @@ header .container {
 .card-img {
     height: 200px;
     width: 100%;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;

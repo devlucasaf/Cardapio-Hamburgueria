@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <tittle>Durrr Burger - Cardápio Digital</tittle>
+        <title>Durrr Burger - Cardápio Digital</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +19,7 @@
                     <span class="logo-subtittle">Hamburgueria Artesanal</span>
                 </div>
 
-                <nav class="menu-nav">
+                <nav class="menu-nav" aria-label="Menu principal">
                     <ul>
                         <li><a href="#inicio-section" class="nav-link active" data-long="Início"><span class="long-text">Início</span><span class="short-text"></span></a></li>
                         <li><a href="#entradas-section" class="nav-link" data-long="Entradas"><span class="long-text">Entradas</span><span class="short-text"></span></a></li>
@@ -30,7 +31,7 @@
                     </ul>
                 </nav>
                 
-                <button class="menu-toggle" aria-label="Abrir menu">
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-nav">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -88,7 +89,7 @@
 
             <section id="hamburguer-section" class="section cardapio">
                 <div class="container">
-                    <h2 class="section tittle">Burguer's</h2>
+                    <h2 class="section-title">Burguer's</h2>
                     <div class="cards-container">
                         <div class="card">
                             <div class="card-img hambuguer-1"></div>
@@ -189,13 +190,14 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </section>
 
             <!-- Seção de Combos -->
 
             <section id="combo-hamburguer-section" class="section cardapio">
                 <div class="container">
-                    <h2 class="section tittle">Combo Burguer's</h2>
+                    <h2 class="section-title">Combo Burguer's</h2>
                     <div class="cards-container">
                         
                         <div class="card">
@@ -302,8 +304,8 @@
 
             <section id="acompanhamentos-section" class="section cardapio">
                 <div class="container">
-                    <h2 class="section tittle">Acompanhamentos</h2>
-                    
+                    <h2 class="section-title">Acompanhamentos</h2>
+                    <div class="cards-container">
                     <div class="card">
                         <div class="card-img acompanhamento-1"></div>
                         <div class="card-content">
@@ -392,6 +394,7 @@
                             <p class="card-description">Frango crocante, leves e delicionos. Acompanhado pela maionese da casa.</p>
                             <span class="card-price">R$ 26,90</span>
                         </div>
+                    </div>
                     </div>
                 </div>
             </section>
