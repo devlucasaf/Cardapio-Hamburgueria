@@ -5,7 +5,7 @@
 }
 
 :root {
-    /* Paleta de cores principal */
+    /* PALETA DE CORES PRINCIPAIS */
     --primary: #FF6B00;
     --primary-dark: #E65100;
     --secondary: #00B0FF;
@@ -17,18 +17,18 @@
     --gray: #757575;
     --success: #00E676;
     
-    /* Gradientes */
+    /* GRADIENTES */
     --gradient-primary: linear-gradient(135deg, var(--primary), var(--accent));
     --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--accent-light));
     --gradient-dark: linear-gradient(135deg, var(--dark), #424242);
     
-    /* Sistema de sombras */
+    /* SISTEMA DE SOMBRAS */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.3);
     --shadow-glow: 0 0 15px rgba(255, 107, 0, 0.5);
     
-    /* Sistema de bordas arredondadas */
+    /* SISTEMA DE BORDAS ARREDONDADAS */
     --border-radius-sm: 8px;
     --border-radius-md: 12px;
     --border-radius-lg: 20px;
@@ -40,19 +40,18 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: var(--dark);
     color: var(--light);
     line-height: 1.6;
     overflow-x: hidden;
-    /* Efeito de background com gradientes radiais */
     background-image: 
         radial-gradient(circle at 25% 25%, rgba(255, 107, 0, 0.1) 0%, transparent 55%),
         radial-gradient(circle at 75% 75%, rgba(0, 176, 255, 0.1) 0%, transparent 55%);
     background-attachment: fixed;
 }
 
-/* HEADER */
+/* --- HEADER --- */
 header {
     background: var(--gradient-dark);
     padding: 1rem 0;
@@ -73,7 +72,7 @@ header .container {
 }
 
 .logo h1 {
-    font-family: 'Fredoka One', cursive;
+    font-family: "Fredoka One", cursive;
     font-size: 2.2rem;
     /* Efeito de texto com gradiente */
     background: var(--gradient-primary);
@@ -121,7 +120,7 @@ header .container {
 }
 
 .menu-nav a::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -155,7 +154,7 @@ header .container {
     transform: scale(1.05);
 }
 
-/* SEÇÕES PRINCIPAIS */
+/* --- SEÇÕES PRINCIPAIS --- */
 .section {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -174,7 +173,7 @@ header .container {
 }
 
 #inicio-section::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -192,7 +191,7 @@ header .container {
 }
 
 .banner-title {
-    font-family: 'Fredoka One', cursive;
+    font-family: "Fredoka One", cursive;
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     background: var(--gradient-primary);
@@ -243,7 +242,7 @@ header .container {
 
 /* TÍTULOS DAS SEÇÕES */
 .section-title {
-    font-family: 'Fredoka One', cursive;
+    font-family: "Fredoka One", cursive;
     font-size: 2.8rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -252,7 +251,7 @@ header .container {
 }
 
 .section-title::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -309,7 +308,7 @@ header .container {
 }
 
 .card-img::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -329,7 +328,7 @@ header .container {
 }
 
 .card-title {
-    font-family: 'Fredoka One', cursive;
+    font-family: "Fredoka One", cursive;
     font-size: 1.5rem;
     margin-bottom: 0.8rem;
     color: var(--accent-light);
@@ -369,7 +368,7 @@ header .container {
 }
 
 .card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -394,7 +393,7 @@ header .container {
 }
 
 .categoria-title {
-    font-family: 'Fredoka One', cursive;
+    font-family: "Fredoka One", cursive;
     font-size: 2rem;
     color: var(--accent-light);
     margin-bottom: 1.5rem;
@@ -404,7 +403,7 @@ header .container {
 }
 
 .bebida-categoria::after {
-    content: '';
+    content: "";
     display: block;
     height: 1px;
     background: linear-gradient(to right, transparent, var(--secondary), transparent);
@@ -420,458 +419,458 @@ header .container {
 
 /* Seção de Entradas */
 .entrada-1 { 
-    background-image: url('../assets/entradas/bolinhas-carne.png'); 
+    background-image: url("../assets/entradas/bolinhas-carne.png"); 
 }
 
 .entrada-2 { 
-    background-image: url('../assets/entradas/crispy-queijo.png'); 
+    background-image: url("../assets/entradas/crispy-queijo.png"); 
 }
 
 .entrada-3 { 
-    background-image: url('../assets/entradas/coxinhas-frango.png'); 
+    background-image: url("../assets/entradas/coxinhas-frango.png"); 
 }
 
 /* Seção de Hamburgueres */
 .hambuguer-1 { 
-    background-image: url('../assets/hamburgueres/copacabana-burger.png'); 
+    background-image: url("../assets/hamburgueres/copacabana-burger.png"); 
 }
 
 .hambuguer-2 { 
-    background-image: url('../assets/hamburgueres/avenida-paulista-burger.png'); 
+    background-image: url("../assets/hamburgueres/avenida-paulista-burger.png"); 
 }
 
 .hambuguer-3 { 
-    background-image: url('../assets/hamburgueres/cataratas-iguacu-burger.png'); 
+    background-image: url("../assets/hamburgueres/cataratas-iguacu-burger.png"); 
 }
 
 .hambuguer-4 { 
-    background-image: url('../assets/hamburgueres/jardim-botanico-burger.png'); 
+    background-image: url("../assets/hamburgueres/jardim-botanico-burger.png"); 
 }
 
 .hambuguer-5 { 
-    background-image: url('../assets/hamburgueres/congresso-nacional-burger.png'); 
+    background-image: url("../assets/hamburgueres/congresso-nacional-burger.png"); 
 }
 
 .hambuguer-6 { 
-    background-image: url('../assets/hamburgueres/pelourinho-burger.png'); 
+    background-image: url("../assets/hamburgueres/pelourinho-burger.png"); 
 }
 
 .hambuguer-7 { 
-    background-image: url('../assets/hamburgueres/jericoacoara-burger.png'); 
+    background-image: url("../assets/hamburgueres/jericoacoara-burger.png"); 
 }
 
 .hambuguer-8 { 
-    background-image: url('../assets/hamburgueres/lencois-maranhenses-burger.png'); 
+    background-image: url("../assets/hamburgueres/lencois-maranhenses-burger.png"); 
 }
 
 .hambuguer-9 { 
-    background-image: url('../assets/hamburgueres/monte-roraima-burger.png'); 
+    background-image: url("../assets/hamburgueres/monte-roraima-burger.png"); 
 }
 
 .hambuguer-10 { 
-    background-image: url('../assets/hamburgueres/serra-gaucha-burger.png'); 
+    background-image: url("../assets/hamburgueres/serra-gaucha-burger.png"); 
 }
 
 .hambuguer-11 { 
-    background-image: url('../assets/hamburgueres/pantanal-burger.png'); 
+    background-image: url("../assets/hamburgueres/pantanal-burger.png"); 
 }
 
 
 /* Seção de Combos */
 .combo-1 { 
-    background-image: url('../assets/combos/copacabana-combo.png'); 
+    background-image: url("../assets/combos/copacabana-combo.png"); 
 }
 
 .combo-2 { 
-    background-image: url('../assets/combos/avenida-paulista-combo.png'); 
+    background-image: url("../assets/combos/avenida-paulista-combo.png"); 
 }
 
 .combo-3 { 
-    background-image: url('../assets/combos/cataratas-iguacu-combo.png'); 
+    background-image: url("../assets/combos/cataratas-iguacu-combo.png"); 
 }
 
 .combo-4 { 
-    background-image: url('../assets/combos/jardim-botanico-combo.png'); 
+    background-image: url("../assets/combos/jardim-botanico-combo.png"); 
 }
 
 .combo-5 { 
-    background-image: url('../assets/combos/congresso-nacional-combo.png'); 
+    background-image: url("../assets/combos/congresso-nacional-combo.png"); 
 }
 
 .combo-6 { 
-    background-image: url('../assets/combos/pelourinho-combo.png'); 
+    background-image: url("../assets/combos/pelourinho-combo.png"); 
 }
 
 .combo-7 { 
-    background-image: url('../assets/combos/jericoacoara-combo.png'); 
+    background-image: url("../assets/combos/jericoacoara-combo.png"); 
 }
 
 .combo-8 { 
-    background-image: url('../assets/combos/lencois-maranhenses-combo.png'); 
+    background-image: url("../assets/combos/lencois-maranhenses-combo.png"); 
 }
 
 .combo-9 { 
-    background-image: url('../assets/combos/monte-roraima-combo.png'); 
+    background-image: url("../assets/combos/monte-roraima-combo.png"); 
 }
 
 .combo-10 { 
-    background-image: url('../assets/combos/serra-gaucha-combo.png'); 
+    background-image: url("../assets/combos/serra-gaucha-combo.png"); 
 }
 
 .combo-11 { 
-    background-image: url('../assets/combos/pantanal-combo.png'); 
+    background-image: url("../assets/combos/pantanal-combo.png"); 
 }
 
 
 /* Seção de Acompanhamentos */
 .acompanhamento-1 { 
-    background-image: url('../assets/acompanhamentos/onion-rings.webp'); 
+    background-image: url("../assets/acompanhamentos/onion-rings.webp"); 
 }
 
 .acompanhamento-2 { 
-    background-image: url('../assets/acompanhamentos/batata-rustica-m.png'); 
+    background-image: url("../assets/acompanhamentos/batata-rustica-m.png"); 
 }
 
 .acompanhamento-3 { 
-    background-image: url('../assets/acompanhamentos/batata-frita-m.png'); 
+    background-image: url("../assets/acompanhamentos/batata-frita-m.png"); 
 }
 
 .acompanhamento-4 { 
-    background-image: url('../assets/acompanhamentos/batata-rustica-g.png'); 
+    background-image: url("../assets/acompanhamentos/batata-rustica-g.png"); 
 }
 
 .acompanhamento-5 { 
-    background-image: url('../assets/acompanhamentos/batata-frita-g.png'); 
+    background-image: url("../assets/acompanhamentos/batata-frita-g.png"); 
 }
 
 .acompanhamento-6 { 
-    background-image: url('../assets/acompanhamentos/batata-cheddar-bacon.png'); 
+    background-image: url("../assets/acompanhamentos/batata-cheddar-bacon.png"); 
 }
 
 .acompanhamento-7 { 
-    background-image: url('../assets/acompanhamentos/chicken-nuggets-8.png'); 
+    background-image: url("../assets/acompanhamentos/chicken-nuggets-8.png"); 
 }
 
 .acompanhamento-8 { 
-    background-image: url('../assets/acompanhamentos/chicken-nuggets-12.png'); 
+    background-image: url("../assets/acompanhamentos/chicken-nuggets-12.png"); 
 }
 
 .acompanhamento-9 { 
-    background-image: url('../assets/acompanhamentos/chicken-nuggets-18.png'); 
+    background-image: url("../assets/acompanhamentos/chicken-nuggets-18.png"); 
 }
 
 /* Seção de Sobremesas */
 .sobremesa-1 { 
-    background-image: url('../assets/sobremesas/brownie-sorvete.png'); 
+    background-image: url("../assets/sobremesas/brownie-sorvete.png"); 
 }
 
 .sobremesa-2 { 
-    background-image: url('../assets/sobremesas/pudim.png'); 
+    background-image: url("../assets/sobremesas/pudim.png"); 
 }
 
 .sobremesa-3 { 
-    background-image: url('../assets/sobremesas/brownie-brigadeiro-pote.png'); 
+    background-image: url("../assets/sobremesas/brownie-brigadeiro-pote.png"); 
 }
 
 .sobremesa-4 { 
-    background-image: url('../assets/sobremesas/banoffe.png'); 
+    background-image: url("../assets/sobremesas/banoffe.png"); 
 }
 
 /* Refrigerantes */
 .bebida-refri-1 { 
-    background-image: url('../assets/bebidas/refrigerantes/pepsi.png'); 
+    background-image: url("../assets/bebidas/refrigerantes/pepsi.png"); 
 }
 
 .bebida-refri-2 { 
-    background-image: url('../assets/bebidas/refrigerantes/pepsi-black.png'); 
+    background-image: url("../assets/bebidas/refrigerantes/pepsi-black.png"); 
 }
 
 .bebida-refri-3 { 
-    background-image: url('../assets/bebidas/refrigerantes/guarana-antarctica.png'); 
+    background-image: url("../assets/bebidas/refrigerantes/guarana-antarctica.png"); 
 }
 
 .bebida-refri-4 { 
-    background-image: url('../assets/bebidas/refrigerantes/guarana-antarctica-zero.png'); 
+    background-image: url("../assets/bebidas/refrigerantes/guarana-antarctica-zero.png"); 
 }
 
 .bebida-refri-5 { 
-    background-image: url('../assets/bebidas/refrigerantes/soda-limonada.png'); 
+    background-image: url("../assets/bebidas/refrigerantes/soda-limonada.png"); 
 }
 
 .bebida-refri-6 { 
-    background-image: url('../assets/bebidas/refrigerantes/coca-cola.png'); 
+    background-image: url("../assets/bebidas/refrigerantes/coca-cola.png"); 
 }
 
 .bebida-refri-7 { 
-    background-image: url('../assets/bebidas/refrigerantes/coca-cola-zero.png'); 
+    background-image: url("../assets/bebidas/refrigerantes/coca-cola-zero.png"); 
 }
 
 .bebida-refri-8 { 
-    background-image: url('../assets/bebidas/refrigerantes/fanta-laranja.png'); 
+    background-image: url("../assets/bebidas/refrigerantes/fanta-laranja.png"); 
 }
 
 .bebida-refri-9 { 
-    background-image: url('../assets/bebidas/refrigerantes/fanta-uva.png'); 
+    background-image: url("../assets/bebidas/refrigerantes/fanta-uva.png"); 
 }
 
 /* Milkshakes */
 .bebida-milkshake-1 { 
-    background-image: url('../assets/bebidas/milkshakes/chocolate.png'); 
+    background-image: url("../assets/bebidas/milkshakes/chocolate.png"); 
 }
 
 .bebida-milkshake-2 { 
-    background-image: url('../assets/bebidas/milkshakes/chocolate-belga.png'); 
+    background-image: url("../assets/bebidas/milkshakes/chocolate-belga.png"); 
 }
 
 .bebida-milkshake-3 { 
-    background-image: url('../assets/bebidas/milkshakes/flocos.png'); 
+    background-image: url("../assets/bebidas/milkshakes/flocos.png"); 
 }
 
 .bebida-milkshake-4 { 
-    background-image: url('../assets/bebidas/milkshakes/creme.png'); 
+    background-image: url("../assets/bebidas/milkshakes/creme.png"); 
 }
 
 .bebida-milkshake-5 { 
-    background-image: url('../assets/bebidas/milkshakes/leite-ninho.png'); 
+    background-image: url("../assets/bebidas/milkshakes/leite-ninho.png"); 
 }
 
 .bebida-milkshake-6 { 
-    background-image: url('../assets/bebidas/milkshakes/morango.png'); 
+    background-image: url("../assets/bebidas/milkshakes/morango.png"); 
 }
 
 .bebida-milkshake-7 { 
-    background-image: url('../assets/bebidas/milkshakes/banana-canela.png'); 
+    background-image: url("../assets/bebidas/milkshakes/banana-canela.png"); 
 }
 
 .bebida-milkshake-8 { 
-    background-image: url('../assets/bebidas/milkshakes/red-velvet.png'); 
+    background-image: url("../assets/bebidas/milkshakes/red-velvet.png"); 
 }
 
 .bebida-milkshake-9 { 
-    background-image: url('../assets/bebidas/milkshakes/caramelo-salgado.png'); 
+    background-image: url("../assets/bebidas/milkshakes/caramelo-salgado.png"); 
 }
 
 .bebida-milkshake-10 { 
-    background-image: url('../assets/bebidas/milkshakes/ninho-nutella.png'); 
+    background-image: url("../assets/bebidas/milkshakes/ninho-nutella.png"); 
 }
 
 .bebida-milkshake-11 { 
-    background-image: url('../assets/bebidas/milkshakes/brownie.png'); 
+    background-image: url("../assets/bebidas/milkshakes/brownie.png"); 
 }
 
 .bebida-milkshake-12 { 
-    background-image: url('../assets/bebidas/milkshakes/oreo-cookies-cream.png'); 
+    background-image: url("../assets/bebidas/milkshakes/oreo-cookies-cream.png"); 
 }
 
 /* Cervejas */
 .bebida-cerveja-1 { 
-    background-image: url('../assets/bebidas/cervejas/corona.png'); 
+    background-image: url("../assets/bebidas/cervejas/corona.png"); 
 }
 
 .bebida-cerveja-2 { 
-    background-image: url('../assets/bebidas/cervejas/heineken.png'); 
+    background-image: url("../assets/bebidas/cervejas/heineken.png"); 
 }
 
 .bebida-cerveja-3 { 
-    background-image: url('../assets/bebidas/cervejas/stella-artois.png'); 
+    background-image: url("../assets/bebidas/cervejas/stella-artois.png"); 
 }
 
 .bebida-cerveja-4 { 
-    background-image: url('../assets/bebidas/cervejas/spaten.png'); 
+    background-image: url("../assets/bebidas/cervejas/spaten.png"); 
 }
 
 .bebida-cerveja-5 { 
-    background-image: url('../assets/bebidas/cervejas/bohemia.png'); 
+    background-image: url("../assets/bebidas/cervejas/bohemia.png"); 
 }
 
 .bebida-cerveja-6 { 
-    background-image: url('../assets/bebidas/cervejas/budweiser.png'); 
+    background-image: url("../assets/bebidas/cervejas/budweiser.png"); 
 }
 
 .bebida-cerveja-7 { 
-    background-image: url('../assets/bebidas/cervejas/colorado.png'); 
+    background-image: url("../assets/bebidas/cervejas/colorado.png"); 
 }
 
 .bebida-cerveja-8 { 
-    background-image: url('../assets/bebidas/cervejas/antarctica-original.png'); 
+    background-image: url("../assets/bebidas/cervejas/antarctica-original.png"); 
 }
 
 .bebida-cerveja-9 { 
-    background-image: url('../assets/bebidas/cervejas/brahma.png'); 
+    background-image: url("../assets/bebidas/cervejas/brahma.png"); 
 }
 
 .bebida-cerveja-10 { 
-    background-image: url('../assets/bebidas/cervejas/chopp-brahma.png'); 
+    background-image: url("../assets/bebidas/cervejas/chopp-brahma.png"); 
 }
 
 .bebida-cerveja-11 { 
-    background-image: url('../assets/bebidas/cervejas/chopp-black-brahma.png'); 
+    background-image: url("../assets/bebidas/cervejas/chopp-black-brahma.png"); 
 }
 
 /* Sucos */
 .bebida-suco-1 { 
-    background-image: url('../assets/bebidas/sucos/suco-laranja.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-laranja.png"); 
 }
 
 .bebida-suco-2 { 
-    background-image: url('../assets/bebidas/sucos/suco-limonada.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-limonada.png"); 
 }
 
 .bebida-suco-3 { 
-    background-image: url('../assets/bebidas/sucos/suco-abacaxi.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-abacaxi.png"); 
 }
 
 .bebida-suco-4 { 
-    background-image: url('../assets/bebidas/sucos/suco-maracuja.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-maracuja.png"); 
 }
 
 .bebida-suco-5 { 
-    background-image: url('../assets/bebidas/sucos/suco-manga.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-manga.png"); 
 }
 
 .bebida-suco-6 { 
-    background-image: url('../assets/bebidas/sucos/suco-abacaxi-hotela.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-abacaxi-hotela.png"); 
 }
 
 .bebida-suco-7 { 
-    background-image: url('../assets/bebidas/sucos/suco-uva.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-uva.png"); 
 }
 
 .bebida-suco-8 { 
-    background-image: url('../assets/bebidas/sucos/suco-cupuacu.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-cupuacu.png"); 
 }
 
 .bebida-suco-9 { 
-    background-image: url('../assets/bebidas/sucos/suco-goiaba.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-goiaba.png"); 
 }
 
 .bebida-suco-10 { 
-    background-image: url('../assets/bebidas/sucos/suco-acerola.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-acerola.png"); 
 }
 
 .bebida-suco-11 { 
-    background-image: url('../assets/bebidas/sucos/suco-caju.png'); 
+    background-image: url("../assets/bebidas/sucos/suco-caju.png"); 
 }
 
 /* Drinks */
 .bebida-drink-1 { 
-    background-image: url('../assets/bebidas/drinks/pina-colada.png'); 
+    background-image: url("../assets/bebidas/drinks/pina-colada.png"); 
 }
 
 .bebida-drink-2 { 
-    background-image: url('../assets/bebidas/drinks/negroni.png'); 
+    background-image: url("../assets/bebidas/drinks/negroni.png"); 
 }
 
 .bebida-drink-3 { 
-    background-image: url('../assets/bebidas/drinks/moscow-mule.png'); 
+    background-image: url("../assets/bebidas/drinks/moscow-mule.png"); 
 }
 
 .bebida-drink-4 { 
-    background-image: url('../assets/bebidas/drinks/gin-tropical.png'); 
+    background-image: url("../assets/bebidas/drinks/gin-tropical.png"); 
 }
 
 .bebida-drink-5 { 
-    background-image: url('../assets/bebidas/drinks/marguerita.png'); 
+    background-image: url("../assets/bebidas/drinks/marguerita.png"); 
 }
 
 .bebida-drink-6 { 
-    background-image: url('../assets/bebidas/drinks/whisky-sour.png'); 
+    background-image: url("../assets/bebidas/drinks/whisky-sour.png"); 
 }
 
 .bebida-drink-7 { 
-    background-image: url('../assets/bebidas/drinks/cosmopolitan.png'); 
+    background-image: url("../assets/bebidas/drinks/cosmopolitan.png"); 
 }
 
 .bebida-drink-8 { 
-    background-image: url('../assets/bebidas/drinks/aperol-spritz.png'); 
+    background-image: url("../assets/bebidas/drinks/aperol-spritz.png"); 
 }
 
 .bebida-drink-9 { 
-    background-image: url('../assets/bebidas/drinks/bloody-mary.png'); 
+    background-image: url("../assets/bebidas/drinks/bloody-mary.png"); 
 }
 
 .bebida-drink-10 { 
-    background-image: url('../assets/bebidas/drinks/mojito.png'); 
+    background-image: url("../assets/bebidas/drinks/mojito.png"); 
 }
 
 .bebida-drink-11 { 
-    background-image: url('../assets/bebidas/drinks/blue-mojito.png'); 
+    background-image: url("../assets/bebidas/drinks/blue-mojito.png"); 
 }
 
 .bebida-drink-12 { 
-    background-image: url('../assets/bebidas/drinks/acerola-martini-limao.png'); 
+    background-image: url("../assets/bebidas/drinks/acerola-martini-limao.png"); 
 }
 
 .bebida-drink-13 { 
-    background-image: url('../assets/bebidas/drinks/aperol-mule.png'); 
+    background-image: url("../assets/bebidas/drinks/aperol-mule.png"); 
 }
 
 .bebida-drink-14 { 
-    background-image: url('../assets/bebidas/drinks/limoncello-spritz.png'); 
+    background-image: url("../assets/bebidas/drinks/limoncello-spritz.png"); 
 }
 
 .bebida-drink-15 { 
-    background-image: url('../assets/bebidas/drinks/capipirinha-maracujá.png'); 
+    background-image: url("../assets/bebidas/drinks/capipirinha-maracujá.png"); 
 }
 
 .bebida-drink-16 { 
-    background-image: url('../assets/bebidas/drinks/capipirinha-abacaxi.png'); 
+    background-image: url("../assets/bebidas/drinks/capipirinha-abacaxi.png"); 
 }
 
 .bebida-drink-17 { 
-    background-image: url('../assets/bebidas/drinks/capipirinha-banana.png'); 
+    background-image: url("../assets/bebidas/drinks/capipirinha-banana.png"); 
 }
 
 .bebida-drink-18 { 
-    background-image: url('../assets/bebidas/drinks/capipirinha-coco.png'); 
+    background-image: url("../assets/bebidas/drinks/capipirinha-coco.png"); 
 }
 
 .bebida-drink-19 { 
-    background-image: url('../assets/bebidas/drinks/capipirinha-kiwi.png'); 
+    background-image: url("../assets/bebidas/drinks/capipirinha-kiwi.png"); 
 }
 
 .bebida-drink-20 { 
-    background-image: url('../assets/bebidas/drinks/caipirinha-limao.png'); 
+    background-image: url("../assets/bebidas/drinks/caipirinha-limao.png"); 
 }
 
 .bebida-drink-21 { 
-    background-image: url('../assets/bebidas/drinks/caipirinha-morango.png'); 
+    background-image: url("../assets/bebidas/drinks/caipirinha-morango.png"); 
 }
 
 .bebida-drink-22 { 
-    background-image: url('../assets/bebidas/drinks/caipirinha-melancia.png'); 
+    background-image: url("../assets/bebidas/drinks/caipirinha-melancia.png"); 
 }
 
 .bebida-drink-23 { 
-    background-image: url('../assets/bebidas/drinks/caipirinha-maca-verde.png'); 
+    background-image: url("../assets/bebidas/drinks/caipirinha-maca-verde.png"); 
 }
 
 .bebida-drink-24 { 
-    background-image: url('../assets/bebidas/drinks/caipirinha-gourmet.png'); 
+    background-image: url("../assets/bebidas/drinks/caipirinha-gourmet.png"); 
 }
 
 /* Outras Bebidas */
 .bebida-outra-1 { 
-    background-image: url('../assets/bebidas/outras/cafe-expresso.png'); 
+    background-image: url("../assets/bebidas/outras/cafe-expresso.png"); 
 }
 
 .bebida-outra-2 { 
-    background-image: url('../assets/bebidas/outras/cappuccino.png'); 
+    background-image: url("../assets/bebidas/outras/cappuccino.png"); 
 }
 
 .bebida-outra-3 { 
-    background-image: url('../assets/bebidas/outras/agua-sem-gas.png'); 
+    background-image: url("../assets/bebidas/outras/agua-sem-gas.png"); 
 }
 
 .bebida-outra-4 { 
-    background-image: url('../assets/bebidas/outras/agua-com-gas.png'); 
+    background-image: url("../assets/bebidas/outras/agua-com-gas.png"); 
 }
 
 /* FALLBACKS PARA IMAGENS AUSENTES */
 .card-img:empty::before,
 .card-img[style*="background-image: none"]::before,
 .card-img:not([style*="background-image"])::before {
-    content: '🍔';
+    content: "🍔";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -884,37 +883,37 @@ header .container {
 .bebida-refri-1:empty::before,
 .bebida-refri-1[style*="background-image: none"]::before,
 .bebida-refri-1:not([style*="background-image"])::before { 
-    content: '🥤'; 
+    content: "🥤"; 
 }
 
 .bebida-milkshake-1:empty::before,
 .bebida-milkshake-1[style*="background-image: none"]::before,
 .bebida-milkshake-1:not([style*="background-image"])::before { 
-    content: '🥛'; 
+    content: "🥛"; 
 }
 
 .bebida-cerveja-1:empty::before,
 .bebida-cerveja-1[style*="background-image: none"]::before,
 .bebida-cerveja-1:not([style*="background-image"])::before { 
-    content: '🍺'; 
+    content: "🍺"; 
 }
 
 .bebida-suco-1:empty::before,
 .bebida-suco-1[style*="background-image: none"]::before,
 .bebida-suco-1:not([style*="background-image"])::before { 
-    content: '🧃'; 
+    content: "🧃"; 
 }
 
 .bebida-drink-1:empty::before,
 .bebida-drink-1[style*="background-image: none"]::before,
 .bebida-drink-1:not([style*="background-image"])::before {
-    content: '🍹'; 
+    content: "🍹"; 
 }
 
 .bebida-outra-1:empty::before,
 .bebida-outra-1[style*="background-image: none"]::before,
 .bebida-outra-1:not([style*="background-image"])::before { 
-    content: '☕'; 
+    content: "☕"; 
 }
 
 /* FOOTER */
@@ -932,7 +931,7 @@ footer {
 }
 
 .footer-logo {
-    font-family: 'Fredoka One', cursive;
+    font-family: "Fredoka One", cursive;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     background: var(--gradient-primary);
@@ -1111,7 +1110,7 @@ footer {
 
 /* INDICADOR DE PÁGINA ATIVA */
 .menu-nav a.active::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 5px;
     right: 5px;
@@ -1204,7 +1203,7 @@ footer {
 }
 
 .card.highlight::after {
-    content: 'PROMOÇÃO';
+    content: "PROMOÇÃO";
     position: absolute;
     top: 10px;
     right: -30px;
@@ -1474,7 +1473,7 @@ footer {
     text-align: right;
 }
 
-/* SISTEMA DE ESPAÇAMENTO */
+/* --- SISTEMA DE ESPAÇAMENTO --- */
 .mt-1 { 
     margin-top: 0.5rem; 
 }

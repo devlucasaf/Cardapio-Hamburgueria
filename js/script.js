@@ -1,32 +1,32 @@
-document.addEventListener('DOMContentLoaded', function () {
-  console.log('Durrr Burger JS Iniciado');
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Durrr Burger JS Iniciado");
 
-  /* CONTROLE DO MENU MOBILE  */
-  const menuToggle = document.querySelector('.menu-toggle');
-  const menuNav = document.querySelector('.menu-nav');
+  // --- CONTROLE DO MENU MOBILE ---
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menuNav = document.querySelector(".menu-nav");
 
   if (menuToggle && menuNav) {
-    menuToggle.addEventListener('click', function () {
-      menuNav.classList.toggle('active');
-      const isExpanded = menuNav.classList.contains('active');
-      this.setAttribute('aria-expanded', isExpanded);
-      this.setAttribute('aria-label', isExpanded ? 'Fechar menu' : 'Abrir menu');
-      const icon = this.querySelector('i');
+    menuToggle.addEventListener("click", function () {
+      menuNav.classList.toggle("active");
+      const isExpanded = menuNav.classList.contains("active");
+      this.setAttribute("aria-expanded", isExpanded);
+      this.setAttribute("aria-label", isExpanded ? "Fechar menu" : "Abrir menu");
+      const icon = this.querySelector("i");
       if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
       }
     });
   }
 
-  /* NAVEGAÇÃO E SCROLL SPY  */
-  const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('.section');
+  // --- NAVEGAÇÃO E SCROLL SPY ---
+  const navLinks = document.querySelectorAll(".nav-link");
+  const sections = document.querySelectorAll(".section");
 
   function resetNavLinks() {
     navLinks.forEach((link) => {
-      link.classList.remove('active', 'current');
-      link.style.cssText = '';
+      link.classList.remove("active", "current");
+      link.style.cssText = "";
     });
   }
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     resetNavLinks();
-    linkToActivate.classList.add('active', 'current');
+    linkToActivate.classList.add("active", "current");
   }
 
   function closeMobileMenuIfOpen() {
@@ -44,20 +44,20 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    if (menuNav.classList.contains('active')) {
-      menuNav.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Abrir menu');
-      const icon = menuToggle.querySelector('i');
+    if (menuNav.classList.contains("active")) {
+      menuNav.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Abrir menu");
+      const icon = menuToggle.querySelector("i");
       if (icon) {
-        icon.classList.add('fa-bars');
-        icon.classList.remove('fa-times');
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-times");
       }
     }
   }
 
   function scrollToTarget(targetSelector) {
-    if (!targetSelector || !targetSelector.startsWith('#')) {
+    if (!targetSelector || !targetSelector.startsWith("#")) {
       return;
     }
 
@@ -69,14 +69,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.scrollTo({
       top: targetElement.offsetTop - 80,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   }
 
   navLinks.forEach((link) => {
-    link.addEventListener('click', function (e) {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
-      const targetId = this.getAttribute('href');
+      const targetId = this.getAttribute("href");
       activateLink(this);
       closeMobileMenuIfOpen();
       scrollToTarget(targetId);
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function highlightOnScroll() {
-    let current = '';
+    let current = "";
     const scrollPos = window.scrollY + 100;
 
     sections.forEach((section) => {
@@ -105,15 +105,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  window.addEventListener('scroll', highlightOnScroll);
+  window.addEventListener("scroll", highlightOnScroll);
   highlightOnScroll();
 
-  /* BOTÕES DE AÇÃO  */
-  const btnVerCardapio = document.querySelector('.btn');
+  // --- BOTÕES DE AÇÃO ---
+  const btnVerCardapio = document.querySelector(".btn");
   if (btnVerCardapio) {
-    btnVerCardapio.addEventListener('click', function (e) {
+    btnVerCardapio.addEventListener("click", function (e) {
       e.preventDefault();
-      const target = '#hamburguer-section';
+      const target = "#hamburguer-section";
       const linkBurguer = document.querySelector(`.nav-link[href="${target}"]`);
       
       if (linkBurguer) {
@@ -125,15 +125,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ANIMAÇÕES DOS CARDS  */
-  const cards = document.querySelectorAll('.card');
-  if (cards.length > 0 && 'IntersectionObserver' in window) {
+  // --- ANIMAÇÕES DOS CARDS ---
+  const cards = document.querySelectorAll(".card");
+  if (cards.length > 0 && "IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
             observer.unobserve(entry.target);
           }
         });
@@ -142,69 +142,69 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
     cards.forEach((card) => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
-      card.style.transition = 'opacity 0.6s, transform 0.6s';
+      card.style.opacity = "0";
+      card.style.transform = "translateY(30px)";
+      card.style.transition = "opacity 0.6s, transform 0.6s";
       observer.observe(card);
 
-      card.addEventListener('mouseenter', function () {
-        this.style.transform = 'translateY(-10px)';
+      card.addEventListener("mouseenter", function () {
+        this.style.transform = "translateY(-10px)";
       });
-      card.addEventListener('mouseleave', function () {
-        this.style.transform = 'translateY(0)';
+      card.addEventListener("mouseleave", function () {
+        this.style.transform = "translateY(0)";
       });
-      card.addEventListener('click', function () {
-        this.style.transform = 'scale(0.95)';
+      card.addEventListener("click", function () {
+        this.style.transform = "scale(0.95)";
         setTimeout(() => {
-          this.style.transform = '';
+          this.style.transform = "";
         }, 200);
       });
     });
   }
 
-  /* AJUSTES DE RESPONSIVIDADE  */
+  // --- AJUSTES DE RESPONSIVIDADE --- 
   function adjustMenuText() {
     const screenWidth = window.innerWidth;
-    const navItems = document.querySelectorAll('.menu-nav a');
+    const navItems = document.querySelectorAll(".menu-nav a");
 
     if (screenWidth < 950 && screenWidth > 768) {
       navItems.forEach((item) => {
-        const original = item.getAttribute('data-long') || item.textContent;
+        const original = item.getAttribute("data-long") || item.textContent;
         let short = original;
 
-        if (original.includes('Combo')) {
-          short = 'Combos';
-        } else if (original.includes('Acompanhamentos')) {
-          short = 'Acomp.';
-        } else if (original.includes('Sobremesas')) {
-          short = 'Sobremesas';
-        } else if (original.includes('Bebidas')) {
-          short = 'Bebidas';
-        } else if (original.includes('Burguer')) {
-          short = 'Burgers';
-        } else if (original.includes('Entradas')) {
-          short = 'Entradas';
-        } else if (original === 'Início') {
-          short = 'Início';
+        if (original.includes("Combo")) {
+          short = "Combos";
+        } else if (original.includes("Acompanhamentos")) {
+          short = "Acomp.";
+        } else if (original.includes("Sobremesas")) {
+          short = "Sobremesas";
+        } else if (original.includes("Bebidas")) {
+          short = "Bebidas";
+        } else if (original.includes("Burguer")) {
+          short = "Burgers";
+        } else if (original.includes("Entradas")) {
+          short = "Entradas";
+        } else if (original === "Início") {
+          short = "Início";
         }
 
         item.textContent = short;
       });
     } else {
       navItems.forEach((item) => {
-        const original = item.getAttribute('data-long') || item.textContent;
+        const original = item.getAttribute("data-long") || item.textContent;
         item.textContent = original;
       });
     }
   }
 
-  window.addEventListener('load', adjustMenuText);
-  window.addEventListener('resize', adjustMenuText);
+  window.addEventListener("load", adjustMenuText);
+  window.addEventListener("resize", adjustMenuText);
 
-  console.log('JavaScript configurado com sucesso!');
+  console.log("JavaScript configurado com sucesso!");
 
-  /* INJEÇÃO DE ESTILOS DINÂMICOS  */
-  const style = document.createElement('style');
+  // --- INJEÇÃO DE ESTILOS DINÂMICOS ---  
+  const style = document.createElement("style");
   style.innerHTML = `
     .menu-nav a.current,
     .menu-nav a.active.current,
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     .menu-nav a.current::after {
-      content: '●';
+      content: "●";
       position: absolute;
       top: 5px;
       right: 5px;
