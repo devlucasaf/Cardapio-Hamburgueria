@@ -2,139 +2,139 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Durrr Burger JS Iniciado");
 
   // --- CONTROLE DO MENU MOBILE ---
-  const menuToggle = document.querySelector(".menu-toggle");
-  const menuNav = document.querySelector(".menu-nav");
+  const botaoAlternarMenu = document.querySelector(".menu-toggle");
+  const menuNavegacao = document.querySelector(".menu-nav");
 
-  if (menuToggle && menuNav) {
-    menuToggle.addEventListener("click", function () {
-      menuNav.classList.toggle("active");
-      const isExpanded = menuNav.classList.contains("active");
-      this.setAttribute("aria-expanded", isExpanded);
-      this.setAttribute("aria-label", isExpanded ? "Fechar menu" : "Abrir menu");
-      const icon = this.querySelector("i");
-      if (icon) {
-        icon.classList.toggle("fa-bars");
-        icon.classList.toggle("fa-times");
+  if (botaoAlternarMenu && menuNavegacao) {
+    botaoAlternarMenu.addEventListener("click", function () {
+      menuNavegacao.classList.toggle("active");
+      const estaExpandido = menuNavegacao.classList.contains("active");
+      this.setAttribute("aria-expanded", estaExpandido);
+      this.setAttribute("aria-label", estaExpandido ? "Fechar menu" : "Abrir menu");
+      const icone = this.querySelector("i");
+      if (icone) {
+        icone.classList.toggle("fa-bars");
+        icone.classList.toggle("fa-times");
       }
     });
   }
 
   // --- NAVEGAÇÃO E SCROLL SPY ---
-  const navLinks = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll(".section");
+  const linksDeNavegacao = document.querySelectorAll(".nav-link");
+  const secoes = document.querySelectorAll(".section");
 
-  function resetNavLinks() {
-    navLinks.forEach((link) => {
+  function redefinirLinksDeNavegacao() {
+    linksDeNavegacao.forEach((link) => {
       link.classList.remove("active", "current");
       link.style.cssText = "";
     });
   }
 
-  function activateLink(linkToActivate) {
-    if (!linkToActivate) {
+  function ativarLink(linkParaAtivar) {
+    if (!linkParaAtivar) {
       return;
     }
-    
-    resetNavLinks();
-    linkToActivate.classList.add("active", "current");
+
+    redefinirLinksDeNavegacao();
+    linkParaAtivar.classList.add("active", "current");
   }
 
-  function closeMobileMenuIfOpen() {
-    if (!menuNav || !menuToggle) {
+  function fecharMenuMobileSeAberto() {
+    if (!menuNavegacao || !botaoAlternarMenu) {
       return;
     }
 
-    if (menuNav.classList.contains("active")) {
-      menuNav.classList.remove("active");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Abrir menu");
-      const icon = menuToggle.querySelector("i");
-      if (icon) {
-        icon.classList.add("fa-bars");
-        icon.classList.remove("fa-times");
+    if (menuNavegacao.classList.contains("active")) {
+      menuNavegacao.classList.remove("active");
+      botaoAlternarMenu.setAttribute("aria-expanded", "false");
+      botaoAlternarMenu.setAttribute("aria-label", "Abrir menu");
+      const icone = botaoAlternarMenu.querySelector("i");
+      if (icone) {
+        icone.classList.add("fa-bars");
+        icone.classList.remove("fa-times");
       }
     }
   }
 
-  function scrollToTarget(targetSelector) {
-    if (!targetSelector || !targetSelector.startsWith("#")) {
+  function rolarParaAlvo(seletorAlvo) {
+    if (!seletorAlvo || !seletorAlvo.startsWith("#")) {
       return;
     }
 
-    const targetElement = document.querySelector(targetSelector);
+    const elementoAlvo = document.querySelector(seletorAlvo);
 
-    if (!targetElement) {
+    if (!elementoAlvo) {
       return;
     }
 
     window.scrollTo({
-      top: targetElement.offsetTop - 80,
+      top: elementoAlvo.offsetTop - 80,
       behavior: "smooth",
     });
   }
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href");
-      activateLink(this);
-      closeMobileMenuIfOpen();
-      scrollToTarget(targetId);
+  linksDeNavegacao.forEach((link) => {
+    link.addEventListener("click", function (evento) {
+      evento.preventDefault();
+      const alvoId = this.getAttribute("href");
+      ativarLink(this);
+      fecharMenuMobileSeAberto();
+      rolarParaAlvo(alvoId);
     });
   });
 
-  function highlightOnScroll() {
-    let current = "";
-    const scrollPos = window.scrollY + 100;
+  function destacarAoRolar() {
+    let atual = "";
+    const posicaoRolagem = window.scrollY + 100;
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-        current = section.id;
+    secoes.forEach((secao) => {
+      const topoSecao = secao.offsetTop;
+      const alturaSecao = secao.clientHeight;
+      if (posicaoRolagem >= topoSecao && posicaoRolagem < topoSecao + alturaSecao) {
+        atual = secao.id;
       }
     });
 
-    if (!current) {
+    if (!atual) {
       return;
     }
 
-    const active = document.querySelector(`.nav-link[href="#${current}"]`);
-    if (active) {
-      activateLink(active);
+    const linkAtivo = document.querySelector(`.nav-link[href="#${atual}"]`);
+    if (linkAtivo) {
+      ativarLink(linkAtivo);
     }
   }
 
-  window.addEventListener("scroll", highlightOnScroll);
-  highlightOnScroll();
+  window.addEventListener("scroll", destacarAoRolar);
+  destacarAoRolar();
 
   // --- BOTÕES DE AÇÃO ---
-  const btnVerCardapio = document.querySelector(".btn");
-  if (btnVerCardapio) {
-    btnVerCardapio.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = "#hamburguer-section";
-      const linkBurguer = document.querySelector(`.nav-link[href="${target}"]`);
-      
+  const botaoVerCardapio = document.querySelector(".btn");
+  if (botaoVerCardapio) {
+    botaoVerCardapio.addEventListener("click", function (evento) {
+      evento.preventDefault();
+      const alvo = "#hamburguer-section";
+      const linkBurguer = document.querySelector(`.nav-link[href="${alvo}"]`);
+
       if (linkBurguer) {
-        activateLink(linkBurguer);
+        ativarLink(linkBurguer);
       }
 
-      scrollToTarget(target);
-      closeMobileMenuIfOpen();
+      rolarParaAlvo(alvo);
+      fecharMenuMobileSeAberto();
     });
   }
 
   // --- ANIMAÇÕES DOS CARDS ---
   const cards = document.querySelectorAll(".card");
   if (cards.length > 0 && "IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-            observer.unobserve(entry.target);
+    const observador = new IntersectionObserver(
+      (entradas) => {
+        entradas.forEach((entrada) => {
+          if (entrada.isIntersecting) {
+            entrada.target.style.opacity = "1";
+            entrada.target.style.transform = "translateY(0)";
+            observador.unobserve(entrada.target);
           }
         });
       },
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
       card.style.opacity = "0";
       card.style.transform = "translateY(30px)";
       card.style.transition = "opacity 0.6s, transform 0.6s";
-      observer.observe(card);
+      observador.observe(card);
 
       card.addEventListener("mouseenter", function () {
         this.style.transform = "translateY(-10px)";
@@ -162,50 +162,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- AJUSTES DE RESPONSIVIDADE --- 
-  function adjustMenuText() {
-    const screenWidth = window.innerWidth;
-    const navItems = document.querySelectorAll(".menu-nav a");
+  // --- AJUSTES DE RESPONSIVIDADE ---
+  function ajustarTextoDoMenu() {
+    const larguraTela = window.innerWidth;
+    const itensDoMenu = document.querySelectorAll(".menu-nav a");
 
-    if (screenWidth < 950 && screenWidth > 768) {
-      navItems.forEach((item) => {
+    if (larguraTela < 950 && larguraTela > 768) {
+      itensDoMenu.forEach((item) => {
         const original = item.getAttribute("data-long") || item.textContent;
-        let short = original;
+        let curto = original;
 
         if (original.includes("Combo")) {
-          short = "Combos";
+          curto = "Combos";
         } else if (original.includes("Acompanhamentos")) {
-          short = "Acomp.";
+          curto = "Acomp.";
         } else if (original.includes("Sobremesas")) {
-          short = "Sobremesas";
+          curto = "Sobremesas";
         } else if (original.includes("Bebidas")) {
-          short = "Bebidas";
+          curto = "Bebidas";
         } else if (original.includes("Burguer")) {
-          short = "Burgers";
+          curto = "Burgers";
         } else if (original.includes("Entradas")) {
-          short = "Entradas";
+          curto = "Entradas";
         } else if (original === "Início") {
-          short = "Início";
+          curto = "Início";
         }
 
-        item.textContent = short;
+        item.textContent = curto;
       });
     } else {
-      navItems.forEach((item) => {
+      itensDoMenu.forEach((item) => {
         const original = item.getAttribute("data-long") || item.textContent;
         item.textContent = original;
       });
     }
   }
 
-  window.addEventListener("load", adjustMenuText);
-  window.addEventListener("resize", adjustMenuText);
+  window.addEventListener("load", ajustarTextoDoMenu);
+  window.addEventListener("resize", ajustarTextoDoMenu);
 
   console.log("JavaScript configurado com sucesso!");
 
-  // --- INJEÇÃO DE ESTILOS DINÂMICOS ---  
-  const style = document.createElement("style");
-  style.innerHTML = `
+  // --- INJEÇÃO DE ESTILOS DINÂMICOS ---
+  const estilo = document.createElement("style");
+  estilo.innerHTML = `
     .menu-nav a.current,
     .menu-nav a.active.current,
     .menu-nav a.current.active {
@@ -222,16 +222,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     @keyframes pulseGlow {
-      0% { 
-        box-shadow: 0 0 15px rgba(255, 107, 0, 0.7); 
+      0% {
+        box-shadow: 0 0 15px rgba(255, 107, 0, 0.7);
       }
 
-      50% { 
-        box-shadow: 0 0 30px rgba(255, 107, 0, 0.9); 
+      50% {
+        box-shadow: 0 0 30px rgba(255, 107, 0, 0.9);
       }
 
       100% {
-        box-shadow: 0 0 15px rgba(255, 107, 0, 0.7); 
+        box-shadow: 0 0 15px rgba(255, 107, 0, 0.7);
       }
     }
 
@@ -249,5 +249,5 @@ document.addEventListener("DOMContentLoaded", function () {
       text-shadow: 0 0 5px #FFD600;
     }
   `;
-  document.head.appendChild(style);
+  document.head.appendChild(estilo);
 });
