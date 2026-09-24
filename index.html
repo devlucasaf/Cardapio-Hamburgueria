@@ -3,63 +3,111 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Cardápio digital da Durrr Burger: hambúrgueres artesanais, combos, acompanhamentos, bebidas e sobremesas.">
+        <meta name="theme-color" content="#0F0C0A">
         <title>Durrr Burger - Cardápio Digital</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-        <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka+One&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
+        <a href="#conteudo" class="skip-link">Pular para o cardápio</a>
+
+        <header class="site-header">
             <div class="container">
-                <div class="logo">
-                    <h1>Durrr Burger</h1>
-                    <span class="logo-subtittle">Hamburgueria Artesanal</span>
+                <a href="#inicio-section" class="logo js-scroll" aria-label="Durrr Burger - voltar ao início">
+                    <span class="logo-mark" aria-hidden="true"><i class="fas fa-burger"></i></span>
+                    <span class="logo-text">
+                        <span class="logo-title">Durrr Burger</span>
+                        <span class="logo-subtitle">Hamburgueria Artesanal</span>
+                    </span>
+                </a>
+
+                <div class="search" role="search">
+                    <label for="busca-cardapio" class="visually-hidden">Buscar no cardápio</label>
+                    <i class="fas fa-magnifying-glass search-icon" aria-hidden="true"></i>
+                    <input type="search" id="busca-cardapio" class="search-input" placeholder="Buscar burger, bebida, sobremesa..." autocomplete="off" enterkeyhint="search">
+                    <button type="button" class="search-clear" aria-label="Limpar busca" hidden><i class="fas fa-xmark" aria-hidden="true"></i></button>
                 </div>
 
-                <nav class="menu-nav" aria-label="Menu principal">
-                    <ul>
-                        <li><a href="#inicio-section" class="nav-link active" data-long="Início"><span class="long-text">Início</span><span class="short-text"></span></a></li>
-                        <li><a href="#entradas-section" class="nav-link" data-long="Entradas"><span class="long-text">Entradas</span><span class="short-text"></span></a></li>
-                        <li><a href="#hamburguer-section" class="nav-link" data-long="Burguer's"><span class="long-text">Burguer's</span><span class="short-text"></span></a></li>
-                        <li><a href="#combo-hamburguer-section" class="nav-link" data-long="Combo Burguer's"><span class="long-text">Combo Burguer's</span><span class="short-text"></span></a></li>
-                        <li><a href="#acompanhamentos-section" class="nav-link" data-long="Acompanhamentos"><span class="long-text">Acompanhamentos</span><span class="short-text"></span></a></li>
-                        <li><a href="#bebidas-section" class="nav-link" data-long="Bebidas"><span class="long-text">Bebidas</span><span class="short-text"></span></a></li>
-                        <li><a href="#sobremesas-section" class="nav-link" data-long="Sobremesas"><span class="long-text">Sobremesas</span><span class="short-text"></span></a></li>
-                    </ul>
-                </nav>
-                
-                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-nav">
+                <button type="button" class="cart-toggle" aria-label="Abrir meu pedido" aria-expanded="false" aria-controls="cart-drawer">
+                    <i class="fas fa-bag-shopping" aria-hidden="true"></i>
+                    <span class="cart-toggle-label">Meu pedido</span>
+                    <span class="cart-count" hidden>0</span>
+                </button>
+
+                <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-nav">
                     <i class="fas fa-bars"></i>
                 </button>
+
+                <nav id="menu-nav" class="menu-nav" aria-label="Categorias do cardápio">
+                    <ul>
+                        <li><a href="#inicio-section" class="nav-link active" data-long="Início"><i class="fas fa-house" aria-hidden="true"></i><span class="nav-label">Início</span></a></li>
+                        <li><a href="#entradas-section" class="nav-link" data-long="Entradas"><i class="fas fa-cheese" aria-hidden="true"></i><span class="nav-label">Entradas</span></a></li>
+                        <li><a href="#hamburguer-section" class="nav-link" data-long="Burguer's"><i class="fas fa-burger" aria-hidden="true"></i><span class="nav-label">Burguer's</span></a></li>
+                        <li><a href="#combo-hamburguer-section" class="nav-link" data-long="Combo Burguer's"><i class="fas fa-layer-group" aria-hidden="true"></i><span class="nav-label">Combo Burguer's</span></a></li>
+                        <li><a href="#acompanhamentos-section" class="nav-link" data-long="Acompanhamentos"><i class="fas fa-drumstick-bite" aria-hidden="true"></i><span class="nav-label">Acompanhamentos</span></a></li>
+                        <li><a href="#bebidas-section" class="nav-link" data-long="Bebidas"><i class="fas fa-martini-glass-citrus" aria-hidden="true"></i><span class="nav-label">Bebidas</span></a></li>
+                        <li><a href="#sobremesas-section" class="nav-link" data-long="Sobremesas"><i class="fas fa-ice-cream" aria-hidden="true"></i><span class="nav-label">Sobremesas</span></a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
-        <main>
-            <section id="inicio-section" class="section cardapio">
-                <div class="logo">
-                    <h1>Durrr Burger</h1>
-                    <span class="logo-subtitle">Hamburgueria Artesanal</span>
-                </div>
+        <main id="conteudo" tabindex="-1">
+            <section id="inicio-section" class="section hero">
+                <div class="container hero-inner">
+                    <div class="banner-content">
+                        <span class="hero-eyebrow"><i class="fas fa-fire" aria-hidden="true"></i> Hamburgueria Artesanal</span>
+                        <h1 class="banner-title">O Melhor Hambúrguer <span>da Cidade</span></h1>
+                        <p class="banner-slogan">Carnes naquele ponto, ingredientes selecionados e pães artesanais assados diariamente.</p>
+                        <div class="hero-actions">
+                            <a href="#hamburguer-section" class="btn js-scroll">Ver Cardápio <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href="#combo-hamburguer-section" class="btn btn-ghost js-scroll">Ver Combos</a>
+                        </div>
+                        <ul class="hero-highlights">
+                            <li><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Blends de 200g</li>
+                            <li><i class="fas fa-bread-slice" aria-hidden="true"></i> Pães artesanais</li>
+                            <li><i class="fas fa-leaf" aria-hidden="true"></i> Ingredientes selecionados</li>
+                        </ul>
+                    </div>
 
-                <div class="banner-content">
-                    <h2 class="banner-title">O Melhor Hambúrguer da Cidade</h2>
-                    <p class="banner-slogan">Carnes naquele ponto, ingredientes selecionados e pães artesanais assados diariamente.</p>
-                    <a href="#hamburgueres" class="btn">Ver Cardápio</a>
+                    <div class="hero-visual">
+                        <img src="assets/hamburgueres/copacabana-burger.png" alt="Copacabana Burger: pão brioche, blend de costela, queijo coalho grelhado, alface e cebola roxa" width="1024" height="1024" fetchpriority="high">
+                        <div class="hero-badge" aria-hidden="true">
+                            <span class="hero-badge-icon"><i class="fas fa-fire"></i></span>
+                            <div class="hero-badge-text">
+                                <strong>Copacabana Burger</strong>
+                                <span>Blend de costela 200g</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
+            <div class="container search-empty" hidden>
+                <div class="search-empty-icon" aria-hidden="true"><i class="fas fa-magnifying-glass"></i></div>
+                <h2>Nenhum item encontrado</h2>
+                <p>Não encontramos resultados para "<strong class="search-empty-term"></strong>". Tente outro nome ou ingrediente.</p>
+                <button type="button" class="btn btn-ghost search-empty-reset">Limpar busca</button>
+            </div>
+
             <section id="entradas-section" class="section cardapio">
                 <div class="container">
-                    <h2 class="section-title">Entradas</h2>
+                    <div class="section-header">
+                        <span class="section-eyebrow"><i class="fas fa-cheese" aria-hidden="true"></i> Para começar</span>
+                        <h2 class="section-title">Entradas</h2>
+                        <p class="section-subtitle">Petiscos crocantes para abrir o apetite e dividir com a mesa.</p>
+                    </div>
                     <div class="cards-container">
                         <div class="card">
                             <div class="card-img entrada-1"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Bolinhas de Carne</h3>
-                                <p class="card-description">Petisco crocante preparados com carne Angus desfiada, mandioca cozida e temperos.</p>
+                                <p class="card-description">Petisco crocante preparado com carne Angus desfiada, mandioca cozida e temperos.</p>
                                 <span class="card-price">R$ 58,65</span>
                             </div>
                         </div>
@@ -89,13 +137,17 @@
 
             <section id="hamburguer-section" class="section cardapio">
                 <div class="container">
-                    <h2 class="section-title">Burguer's</h2>
+                    <div class="section-header">
+                        <span class="section-eyebrow"><i class="fas fa-burger" aria-hidden="true"></i> Assinatura da casa</span>
+                        <h2 class="section-title">Burguer's</h2>
+                        <p class="section-subtitle">Blends suculentos e pães artesanais inspirados nos cartões-postais do Brasil.</p>
+                    </div>
                     <div class="cards-container">
                         <div class="card">
                             <div class="card-img hambuguer-1"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Copacabana Burger</h3>
-                                <p class="card-description">Pão brioche com gergelin, blend de costela com 200g, queijo coalho grelhado, alface, cebola roxa com maionese de limão siciliano com coentro.</p>
+                                <p class="card-description">Pão brioche com gergelim, blend de costela com 200g, queijo coalho grelhado, alface, cebola roxa com maionese de limão siciliano com coentro.</p>
                                 <span class="card-price">R$ 21,93</span>
                             </div>
                         </div>
@@ -113,7 +165,7 @@
                             <div class="card-img hambuguer-3"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Cataratas do Iguaçu Burger</h3>
-                                <p class="card-description">Pão rústico com gergelim, blend de costela com 200g, queijo provolone, molho de ervas, pepino, alface, pimenta dedo de moça e chips de mandio crocante.</p>
+                                <p class="card-description">Pão rústico com gergelim, blend de costela com 200g, queijo provolone, molho de ervas, pepino, alface, pimenta dedo de moça e chips de mandioca crocante.</p>
                                 <span class="card-price">R$ 42,54</span>
                             </div>
                         </div>
@@ -176,16 +228,17 @@
                             <div class="card-img hambuguer-10"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Serra Gaúcha Burger</h3>
-                                <p class="card-description">Pão de malte, blend de fraldinha com toque de linguiça artesanal, queijo colonial derretido, molho de vilho tinto reduzido, alface, rúcula, cogumelos salteados na manteiga e chips de polenta crocante.</p>
+                                <p class="card-description">Pão de malte, blend de fraldinha com toque de linguiça artesanal, queijo colonial derretido, molho de vinho tinto reduzido, alface, rúcula, cogumelos salteados na manteiga e chips de polenta crocante.</p>
                                 <span class="card-price">R$ 43,90</span>
                             </div>
                         </div>
 
                         <div class="card">
                             <div class="card-img hambuguer-11"></div>
+                            <span class="card-tag card-tag--veg"><i class="fas fa-leaf" aria-hidden="true"></i> Vegano</span>
                             <div class="card-content">
                                 <h3 class="card-title">Pantanal Burger</h3>
-                                <p class="card-description">Pão integral com semestes, hambúrguer de feijão-preto e quinoa, queijo vegano de castanha de caju, molho de manga com toque de pimenta suave, alface, rúcula, chips de mandioca crocante.</p>
+                                <p class="card-description">Pão integral com sementes, hambúrguer de feijão-preto e quinoa, queijo vegano de castanha de caju, molho de manga com toque de pimenta suave, alface, rúcula, chips de mandioca crocante.</p>
                                 <span class="card-price">R$ 34,90</span>
                             </div>
                         </div>
@@ -197,11 +250,15 @@
 
             <section id="combo-hamburguer-section" class="section cardapio">
                 <div class="container">
-                    <h2 class="section-title">Combo Burguer's</h2>
+                    <div class="section-header">
+                        <span class="section-eyebrow"><i class="fas fa-layer-group" aria-hidden="true"></i> Refeição completa</span>
+                        <h2 class="section-title">Combo Burguer's</h2>
+                        <p class="section-subtitle">Seu burger favorito acompanhado de porção e bebida.</p>
+                    </div>
                     <div class="cards-container">
                         
                         <div class="card">
-                            <div class="card-img combo-1"></div>
+                            <div class="card-img combo-1" data-fallback="hambuguer-1"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Copacabana Combo</h3>
                                 <p class="card-description">Copacabana Burger + Batata frita + Refrigerante ou suco.</p>
@@ -210,7 +267,7 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-2"></div>
+                            <div class="card-img combo-2" data-fallback="hambuguer-2"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Avenida Paulista Combo</h3>
                                 <p class="card-description">Avenida Paulista Burger + Batata rústica + Caipirinha ou refrigerante.</p>
@@ -219,7 +276,7 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-3"></div>
+                            <div class="card-img combo-3" data-fallback="hambuguer-3"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Cataratas do Iguaçu Combo</h3>
                                 <p class="card-description">Cataratas Burger + Mandioca frita + Suco tropical.</p>
@@ -228,7 +285,7 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-4"></div>
+                            <div class="card-img combo-4" data-fallback="hambuguer-4"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Jardim Botânico Combo</h3>
                                 <p class="card-description">Jardim Botânico Burger + Chips de legumes + Suco natural.</p>
@@ -237,7 +294,7 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-5"></div>
+                            <div class="card-img combo-5" data-fallback="hambuguer-5"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Congresso Nacional Combo</h3>
                                 <p class="card-description">Congresso Nacional Burger + Chips de batata-doce + Refrigerante ou suco.</p>
@@ -246,7 +303,7 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-6"></div>
+                            <div class="card-img combo-6" data-fallback="hambuguer-6"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Pelourinho Combo</h3>
                                 <p class="card-description">Pelourinho Burger + Chips de banana-da-terra + Suco de maracujá.</p>
@@ -255,7 +312,7 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-7"></div>
+                            <div class="card-img combo-7" data-fallback="hambuguer-7"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Jericoacoara Combo</h3>
                                 <p class="card-description">Jericoacoara Burger + Chips de mandioca + Suco de caju.</p>
@@ -264,7 +321,7 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-8"></div>
+                            <div class="card-img combo-8" data-fallback="hambuguer-8"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Lençóis Maranhenses Combo</h3>
                                 <p class="card-description">Lençóis Burger + Mandioca frita + Guaraná Jesus ou suco de cupuaçu.</p>
@@ -273,7 +330,7 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-9"></div>
+                            <div class="card-img combo-9" data-fallback="hambuguer-9"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Monte Roraima Combo</h3>
                                 <p class="card-description">Monte Roraima Burger + Chips de banana pacovã + Suco de cupuaçu.</p>
@@ -282,7 +339,7 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-10"></div>
+                            <div class="card-img combo-10" data-fallback="hambuguer-10"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Serra Gaúcha Combo</h3>
                                 <p class="card-description">Serra Gaúcha Burger + Chips de polenta + Suco de uva ou vinho da casa.</p>
@@ -291,7 +348,8 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img combo-11"></div>
+                            <div class="card-img combo-11" data-fallback="hambuguer-11"></div>
+                            <span class="card-tag card-tag--veg"><i class="fas fa-leaf" aria-hidden="true"></i> Vegano</span>
                             <div class="card-content">
                                 <h3 class="card-title">Pantanal Combo</h3>
                                 <p class="card-description">Pantanal Burger (vegano) + Chips de mandioca crocante + Suco natural de manga ou limão.</p>
@@ -304,7 +362,11 @@
 
             <section id="acompanhamentos-section" class="section cardapio">
                 <div class="container">
-                    <h2 class="section-title">Acompanhamentos</h2>
+                    <div class="section-header">
+                        <span class="section-eyebrow"><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Para acompanhar</span>
+                        <h2 class="section-title">Acompanhamentos</h2>
+                        <p class="section-subtitle">Porções crocantes que combinam com qualquer burger.</p>
+                    </div>
                     <div class="cards-container">
                     <div class="card">
                         <div class="card-img acompanhamento-1"></div>
@@ -328,7 +390,7 @@
                         <div class="card-img acompanhamento-3"></div>
                         <div class="card-content">
                             <h3 class="card-title">Batata Frita M</h3>
-                            <p class="card-description">Batatas fritas temperada com sal e alecrim.</p>
+                            <p class="card-description">Batatas fritas temperadas com sal e alecrim.</p>
                             <span class="card-price">R$ 9,90</span>  
                         </div>
                     </div>
@@ -336,7 +398,7 @@
                     <div class="card">
                         <div class="card-img acompanhamento-4"></div>
                         <div class="card-content">
-                            <h3 class="card-title">Batata Rústicas G</h3>
+                            <h3 class="card-title">Batata Rústica G</h3>
                             <p class="card-description">Um balde médio com batatas com cascas temperadas com páprica picante e alecrim.</p>
                             <span class="card-price">R$ 17,90</span>  
                         </div>
@@ -346,7 +408,7 @@
                         <div class="card-img acompanhamento-5"></div>
                         <div class="card-content">
                             <h3 class="card-title">Batata Frita G</h3>
-                            <p class="card-description">Um balde médio com batatas fritas temperada com sal e alecrim.</p>
+                            <p class="card-description">Um balde médio com batatas fritas temperadas com sal e alecrim.</p>
                             <span class="card-price">R$ 16,90</span>  
                         </div>
                     </div>
@@ -354,14 +416,14 @@
                     <div class="card">
                         <div class="card-img acompanhamento-6"></div>
                         <div class="card-content">
-                            <h3 class="card-title">Batata Fritas Cheddar e Bacon</h3>
+                            <h3 class="card-title">Batata Frita Cheddar e Bacon</h3>
                             <p class="card-description">Batata frita temperada com sal, com molho com queijo tipo cheddar e bacon crispy.</p>
                             <span class="card-price">R$ 20,90</span>  
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-img acompanhamento-6"></div>
+                        <div class="card-img acompanhamento-10"></div>
                         <div class="card-content">
                             <h3 class="card-title">Mandioca Frita</h3>
                             <p class="card-description">Mandioca frita temperada com sal.</p>
@@ -373,7 +435,7 @@
                         <div class="card-img acompanhamento-7"></div>
                         <div class="card-content">
                             <h3 class="card-title">Chicken Nuggets 8 unidades</h3>
-                            <p class="card-description">Frango crocante, leves e delicionos. Acompanhado pela maionese da casa.</p>
+                            <p class="card-description">Frango crocante, leve e delicioso. Acompanhado pela maionese da casa.</p>
                             <span class="card-price">R$ 15,90</span>  
                         </div>
                     </div>
@@ -382,16 +444,16 @@
                         <div class="card-img acompanhamento-8"></div>
                         <div class="card-content">
                             <h3 class="card-title">Chicken Nuggets 12 unidades</h3>
-                            <p class="card-description">Frango crocante, leves e delicionos. Acompanhado pela maionese da casa.</p>
+                            <p class="card-description">Frango crocante, leve e delicioso. Acompanhado pela maionese da casa.</p>
                             <span class="card-price">R$ 23,90</span>
                         </div>
                     </div>
 
                     <div class="card">
-                        <div class="card-img entrada-9"></div>
+                        <div class="card-img acompanhamento-9"></div>
                         <div class="card-content">
                             <h3 class="card-title">Chicken Nuggets 18 unidades</h3>
-                            <p class="card-description">Frango crocante, leves e delicionos. Acompanhado pela maionese da casa.</p>
+                            <p class="card-description">Frango crocante, leve e delicioso. Acompanhado pela maionese da casa.</p>
                             <span class="card-price">R$ 26,90</span>
                         </div>
                     </div>
@@ -401,10 +463,22 @@
 
             <section id="bebidas-section" class="section cardapio">
                 <div class="container">
-                    <h2 class="categoria-title">Bebidas</h2>
+                    <div class="section-header">
+                        <span class="section-eyebrow"><i class="fas fa-martini-glass-citrus" aria-hidden="true"></i> Para refrescar</span>
+                        <h2 class="section-title">Bebidas</h2>
+                        <p class="section-subtitle">Refrigerantes, milkshakes, cervejas, sucos naturais e drinks clássicos.</p>
+                        <nav class="subcategorias" aria-label="Tipos de bebida">
+                            <a href="#bebidas-refrigerantes" class="chip js-scroll"><i class="fas fa-glass-water" aria-hidden="true"></i> Refrigerantes</a>
+                            <a href="#bebidas-milkshakes" class="chip js-scroll"><i class="fas fa-ice-cream" aria-hidden="true"></i> Milkshakes</a>
+                            <a href="#bebidas-cervejas" class="chip js-scroll"><i class="fas fa-beer-mug-empty" aria-hidden="true"></i> Cervejas</a>
+                            <a href="#bebidas-sucos" class="chip js-scroll"><i class="fas fa-lemon" aria-hidden="true"></i> Sucos</a>
+                            <a href="#bebidas-drinks" class="chip js-scroll"><i class="fas fa-martini-glass-citrus" aria-hidden="true"></i> Drinks</a>
+                            <a href="#bebidas-outras" class="chip js-scroll"><i class="fas fa-mug-hot" aria-hidden="true"></i> Outras</a>
+                        </nav>
+                    </div>
 
-                    <div class="bebida-categoria">
-                        <h3 class="categoria-title">Refrigerantes</h3>
+                    <div class="bebida-categoria" id="bebidas-refrigerantes">
+                        <h3 class="categoria-title"><i class="fas fa-glass-water" aria-hidden="true"></i> Refrigerantes</h3>
 
                         <div class="cards-container">
 
@@ -482,8 +556,8 @@
                         </div>
                     </div>
 
-                    <div class="bebida-categoria">
-                        <h3 class="categoria-title">Milkshakes</h3>
+                    <div class="bebida-categoria" id="bebidas-milkshakes">
+                        <h3 class="categoria-title"><i class="fas fa-ice-cream" aria-hidden="true"></i> Milkshakes</h3>
 
                         <div class="cards-container">
 
@@ -585,8 +659,8 @@
                         </div>
                     </div>
 
-                    <div class="bebida-categoria">
-                        <h3 class="categoria-title">Cervejas</h3>
+                    <div class="bebida-categoria" id="bebidas-cervejas">
+                        <h3 class="categoria-title"><i class="fas fa-beer-mug-empty" aria-hidden="true"></i> Cervejas</h3>
 
                         <div class="cards-container">
 
@@ -688,8 +762,8 @@
                         </div>
                     </div>
 
-                    <div class="bebida-categoria">
-                        <h3 class="categoria-title">Sucos</h3>
+                    <div class="bebida-categoria" id="bebidas-sucos">
+                        <h3 class="categoria-title"><i class="fas fa-lemon" aria-hidden="true"></i> Sucos</h3>
 
                         <div class="cards-container">
 
@@ -816,8 +890,8 @@
                         </div>
                     </div> 
 
-                    <div class="bebida-categoria">
-                        <h3 class="categoria-title">Drinks</h3>
+                    <div class="bebida-categoria" id="bebidas-drinks">
+                        <h3 class="categoria-title"><i class="fas fa-martini-glass-citrus" aria-hidden="true"></i> Drinks</h3>
 
                         <div class="cards-container">
 
@@ -1024,8 +1098,8 @@
                         </div>
                     </div>
 
-                    <div class="bebida-categoria">
-                        <h3 class="categoria-title">Outras Bebidas</h3>
+                    <div class="bebida-categoria" id="bebidas-outras">
+                        <h3 class="categoria-title"><i class="fas fa-mug-hot" aria-hidden="true"></i> Outras Bebidas</h3>
 
                         <div class="cards-container">
                             <div class="card bebida-item">
@@ -1063,8 +1137,8 @@
                             <div class="card bebida-item">
                                 <div class="card-img bebida-outra-5"></div>
                                 <div class="card-content">
-                                    <span class="bebida-nome">Vinho</span>
-                                <span class="card-price">R$ 120,90</span>
+                                    <h3 class="card-title">Vinho</h3>
+                                    <span class="card-price">R$ 120,90</span>
                                 </div>
                             </div>
                         </div>
@@ -1074,7 +1148,11 @@
         
             <section id="sobremesas-section" class="section cardapio">
                 <div class="container">
-                    <h2 class="section tittle">Sobremesas</h2>
+                    <div class="section-header">
+                        <span class="section-eyebrow"><i class="fas fa-ice-cream" aria-hidden="true"></i> Para finalizar</span>
+                        <h2 class="section-title">Sobremesas</h2>
+                        <p class="section-subtitle">O final doce que a sua refeição merece.</p>
+                    </div>
                     <div class="cards-container">
 
                         <div class="card">
@@ -1105,10 +1183,10 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-img sobremesa-3"></div>
+                            <div class="card-img sobremesa-4"></div>
                             <div class="card-content">
-                                <h3 class="card-title">Banoffe</h3> 
-                                <p class="card-description">Banoffe feita com um creme especial aveludado, fatias de bananas e uma deliciosa composta artesanal de banana cremosa.</p>
+                                <h3 class="card-title">Banoffe</h3>
+                                <p class="card-description">Banoffe feita com um creme especial aveludado, fatias de bananas e uma deliciosa compota artesanal de banana cremosa.</p>
                                 <span class="card-price">R$ 16,90</span>
                             </div>
                         </div>
@@ -1116,6 +1194,75 @@
                 </div>
             </section>
         </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <span class="footer-logo">Durrr Burger</span>
+                        <p class="footer-info">Hamburgueria artesanal com carnes naquele ponto, ingredientes selecionados e pães assados diariamente.</p>
+                    </div>
+
+                    <nav class="footer-nav" aria-label="Atalhos do cardápio">
+                        <h2 class="footer-heading">Cardápio</h2>
+                        <ul>
+                            <li><a href="#entradas-section" class="js-scroll">Entradas</a></li>
+                            <li><a href="#hamburguer-section" class="js-scroll">Burguer's</a></li>
+                            <li><a href="#combo-hamburguer-section" class="js-scroll">Combo Burguer's</a></li>
+                            <li><a href="#acompanhamentos-section" class="js-scroll">Acompanhamentos</a></li>
+                            <li><a href="#bebidas-section" class="js-scroll">Bebidas</a></li>
+                            <li><a href="#sobremesas-section" class="js-scroll">Sobremesas</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-bottom">
+                    <span>&copy; <span class="footer-year">2026</span> Durrr Burger. Todos os direitos reservados.</span>
+                    <span>Imagens meramente ilustrativas.</span>
+                </div>
+            </div>
+        </footer>
+
+        <button type="button" class="back-to-top" aria-label="Voltar ao topo">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </button>
+
+        <!-- Meu pedido -->
+        <div class="cart-overlay" aria-hidden="true"></div>
+        <aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert>
+            <div class="cart-head">
+                <h2 id="cart-title">Meu pedido</h2>
+                <button type="button" class="cart-close" aria-label="Fechar meu pedido"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+            </div>
+
+            <div class="cart-body">
+                <div class="cart-empty">
+                    <i class="fas fa-bag-shopping" aria-hidden="true"></i>
+                    <strong>Seu pedido está vazio</strong>
+                    <span>Toque em "Adicionar" nos itens do cardápio para montá-lo.</span>
+                </div>
+                <ul class="cart-list" aria-label="Itens do pedido"></ul>
+            </div>
+
+            <div class="cart-foot" hidden>
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong class="cart-total-value" aria-live="polite">R$ 0,00</strong>
+                </div>
+                <div class="cart-actions">
+                    <button type="button" class="btn btn-block cart-continue">Continuar escolhendo</button>
+                    <button type="button" class="btn btn-ghost btn-block cart-clear">
+                        <i class="fas fa-trash-can" aria-hidden="true"></i> Limpar pedido
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <div class="toast" role="status" aria-live="polite">
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            <span class="toast-text"></span>
+        </div>
+
         <script src="js/script.js"></script>
     </body>
 </html>
