@@ -19,7 +19,9 @@
         <header class="site-header">
             <div class="container">
                 <a href="#inicio-section" class="logo js-scroll" aria-label="Durrr Burger - voltar ao início">
-                    <span class="logo-mark" aria-hidden="true"><i class="fas fa-burger"></i></span>
+                    <span class="logo-mark" aria-hidden="true">
+                        <i class="fas fa-burger"></i>
+                    </span>
                     <span class="logo-text">
                         <span class="logo-title">Durrr Burger</span>
                         <span class="logo-subtitle">Hamburgueria Artesanal</span>
@@ -29,8 +31,17 @@
                 <div class="search" role="search">
                     <label for="busca-cardapio" class="visually-hidden">Buscar no cardápio</label>
                     <i class="fas fa-magnifying-glass search-icon" aria-hidden="true"></i>
-                    <input type="search" id="busca-cardapio" class="search-input" placeholder="Buscar burger, bebida, sobremesa..." autocomplete="off" enterkeyhint="search">
-                    <button type="button" class="search-clear" aria-label="Limpar busca" hidden><i class="fas fa-xmark" aria-hidden="true"></i></button>
+                    <input 
+                        type="search" 
+                        id="busca-cardapio" 
+                        class="search-input" 
+                        placeholder="Buscar burger, bebida, sobremesa..." 
+                        autocomplete="off" 
+                        enterkeyhint="search"
+                    >
+                    <button type="button" class="search-clear" aria-label="Limpar busca" hidden>
+                        <i class="fas fa-xmark" aria-hidden="true"></i>
+                    </button>
                 </div>
 
                 <button type="button" class="cart-toggle" aria-label="Abrir meu pedido" aria-expanded="false" aria-controls="cart-drawer">
@@ -45,13 +56,48 @@
 
                 <nav id="menu-nav" class="menu-nav" aria-label="Categorias do cardápio">
                     <ul>
-                        <li><a href="#inicio-section" class="nav-link active" data-long="Início"><i class="fas fa-house" aria-hidden="true"></i><span class="nav-label">Início</span></a></li>
-                        <li><a href="#entradas-section" class="nav-link" data-long="Entradas"><i class="fas fa-cheese" aria-hidden="true"></i><span class="nav-label">Entradas</span></a></li>
-                        <li><a href="#hamburguer-section" class="nav-link" data-long="Burguer's"><i class="fas fa-burger" aria-hidden="true"></i><span class="nav-label">Burguer's</span></a></li>
-                        <li><a href="#combo-hamburguer-section" class="nav-link" data-long="Combo Burguer's"><i class="fas fa-layer-group" aria-hidden="true"></i><span class="nav-label">Combo Burguer's</span></a></li>
-                        <li><a href="#acompanhamentos-section" class="nav-link" data-long="Acompanhamentos"><i class="fas fa-drumstick-bite" aria-hidden="true"></i><span class="nav-label">Acompanhamentos</span></a></li>
-                        <li><a href="#bebidas-section" class="nav-link" data-long="Bebidas"><i class="fas fa-martini-glass-citrus" aria-hidden="true"></i><span class="nav-label">Bebidas</span></a></li>
-                        <li><a href="#sobremesas-section" class="nav-link" data-long="Sobremesas"><i class="fas fa-ice-cream" aria-hidden="true"></i><span class="nav-label">Sobremesas</span></a></li>
+                        <li>
+                            <a href="#inicio-section" class="nav-link active" data-long="Início">
+                                <i class="fas fa-house" aria-hidden="true"></i>
+                                <span class="nav-label">Início</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#entradas-section" class="nav-link" data-long="Entradas">
+                                <i class="fas fa-cheese" aria-hidden="true"></i>
+                                <span class="nav-label">Entradas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#hamburguer-section" class="nav-link" data-long="Burguer's">
+                                <i class="fas fa-burger" aria-hidden="true"></i>
+                                <span class="nav-label">Burguer's</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#combo-hamburguer-section" class="nav-link" data-long="Combo Burguer's">
+                                <i class="fas fa-layer-group" aria-hidden="true"></i>
+                                <span class="nav-label">Combo Burguer's</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#acompanhamentos-section" class="nav-link" data-long="Acompanhamentos">
+                                <i class="fas fa-drumstick-bite" aria-hidden="true"></i>
+                                <span class="nav-label">Acompanhamentos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#bebidas-section" class="nav-link" data-long="Bebidas">
+                                <i class="fas fa-martini-glass-citrus" aria-hidden="true"></i>
+                                <span class="nav-label">Bebidas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sobremesas-section" class="nav-link" data-long="Sobremesas">
+                                <i class="fas fa-ice-cream" aria-hidden="true"></i>
+                                <span class="nav-label">Sobremesas</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -61,11 +107,16 @@
             <section id="inicio-section" class="section hero">
                 <div class="container hero-inner">
                     <div class="banner-content">
-                        <span class="hero-eyebrow"><i class="fas fa-fire" aria-hidden="true"></i> Hamburgueria Artesanal</span>
+                        <span class="hero-eyebrow">
+                            <i class="fas fa-fire" aria-hidden="true"></i> Hamburgueria Artesanal
+                        </span>
                         <h1 class="banner-title">O Melhor Hambúrguer <span>da Cidade</span></h1>
                         <p class="banner-slogan">Carnes naquele ponto, ingredientes selecionados e pães artesanais assados diariamente.</p>
                         <div class="hero-actions">
-                            <a href="#hamburguer-section" class="btn js-scroll">Ver Cardápio <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            <a href="#hamburguer-section" class="btn js-scroll">
+                                Ver Cardápio 
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
                             <a href="#combo-hamburguer-section" class="btn btn-ghost js-scroll">Ver Combos</a>
                         </div>
                         <ul class="hero-highlights">
@@ -76,9 +127,17 @@
                     </div>
 
                     <div class="hero-visual">
-                        <img src="assets/hamburgueres/copacabana-burger.png" alt="Copacabana Burger: pão brioche, blend de costela, queijo coalho grelhado, alface e cebola roxa" width="1024" height="1024" fetchpriority="high">
+                        <img 
+                            src="assets/hamburgueres/copacabana-burger.png" 
+                            alt="Copacabana Burger: pão brioche, blend de costela, queijo coalho grelhado, alface e cebola roxa" 
+                            width="1024" 
+                            height="1024" 
+                            fetchpriority="high"
+                        >
                         <div class="hero-badge" aria-hidden="true">
-                            <span class="hero-badge-icon"><i class="fas fa-fire"></i></span>
+                            <span class="hero-badge-icon">
+                                <i class="fas fa-fire"></i>
+                            </span>
                             <div class="hero-badge-text">
                                 <strong>Copacabana Burger</strong>
                                 <span>Blend de costela 200g</span>
@@ -89,7 +148,9 @@
             </section>
 
             <div class="container search-empty" hidden>
-                <div class="search-empty-icon" aria-hidden="true"><i class="fas fa-magnifying-glass"></i></div>
+                <div class="search-empty-icon" aria-hidden="true">
+                    <i class="fas fa-magnifying-glass"></i>
+                </div>
                 <h2>Nenhum item encontrado</h2>
                 <p>Não encontramos resultados para "<strong class="search-empty-term"></strong>". Tente outro nome ou ingrediente.</p>
                 <button type="button" class="btn btn-ghost search-empty-reset">Limpar busca</button>
@@ -98,7 +159,9 @@
             <section id="entradas-section" class="section cardapio">
                 <div class="container">
                     <div class="section-header">
-                        <span class="section-eyebrow"><i class="fas fa-cheese" aria-hidden="true"></i> Para começar</span>
+                        <span class="section-eyebrow">
+                            <i class="fas fa-cheese" aria-hidden="true"></i> Para começar
+                        </span>
                         <h2 class="section-title">Entradas</h2>
                         <p class="section-subtitle">Petiscos crocantes para abrir o apetite e dividir com a mesa.</p>
                     </div>
@@ -134,11 +197,12 @@
             </section>
 
             <!-- Seção de Hamburgueres -->
-
             <section id="hamburguer-section" class="section cardapio">
                 <div class="container">
                     <div class="section-header">
-                        <span class="section-eyebrow"><i class="fas fa-burger" aria-hidden="true"></i> Assinatura da casa</span>
+                        <span class="section-eyebrow">
+                            <i class="fas fa-burger" aria-hidden="true"></i> Assinatura da casa
+                        </span>
                         <h2 class="section-title">Burguer's</h2>
                         <p class="section-subtitle">Blends suculentos e pães artesanais inspirados nos cartões-postais do Brasil.</p>
                     </div>
@@ -235,7 +299,9 @@
 
                         <div class="card">
                             <div class="card-img hambuguer-11"></div>
-                            <span class="card-tag card-tag--veg"><i class="fas fa-leaf" aria-hidden="true"></i> Vegano</span>
+                            <span class="card-tag card-tag--veg">
+                                <i class="fas fa-leaf" aria-hidden="true"></i> Vegano
+                            </span>
                             <div class="card-content">
                                 <h3 class="card-title">Pantanal Burger</h3>
                                 <p class="card-description">Pão integral com sementes, hambúrguer de feijão-preto e quinoa, queijo vegano de castanha de caju, molho de manga com toque de pimenta suave, alface, rúcula, chips de mandioca crocante.</p>
@@ -251,7 +317,9 @@
             <section id="combo-hamburguer-section" class="section cardapio">
                 <div class="container">
                     <div class="section-header">
-                        <span class="section-eyebrow"><i class="fas fa-layer-group" aria-hidden="true"></i> Refeição completa</span>
+                        <span class="section-eyebrow">
+                            <i class="fas fa-layer-group" aria-hidden="true"></i> Refeição completa
+                        </span>
                         <h2 class="section-title">Combo Burguer's</h2>
                         <p class="section-subtitle">Seu burger favorito acompanhado de porção e bebida.</p>
                     </div>
@@ -349,7 +417,9 @@
 
                         <div class="card">
                             <div class="card-img combo-11" data-fallback="hambuguer-11"></div>
-                            <span class="card-tag card-tag--veg"><i class="fas fa-leaf" aria-hidden="true"></i> Vegano</span>
+                            <span class="card-tag card-tag--veg">
+                                <i class="fas fa-leaf" aria-hidden="true"></i> Vegano
+                            </span>
                             <div class="card-content">
                                 <h3 class="card-title">Pantanal Combo</h3>
                                 <p class="card-description">Pantanal Burger (vegano) + Chips de mandioca crocante + Suco natural de manga ou limão.</p>
@@ -363,7 +433,9 @@
             <section id="acompanhamentos-section" class="section cardapio">
                 <div class="container">
                     <div class="section-header">
-                        <span class="section-eyebrow"><i class="fas fa-drumstick-bite" aria-hidden="true"></i> Para acompanhar</span>
+                        <span class="section-eyebrow">
+                            <i class="fas fa-drumstick-bite" aria-hidden="true"></i> Para acompanhar
+                        </span>
                         <h2 class="section-title">Acompanhamentos</h2>
                         <p class="section-subtitle">Porções crocantes que combinam com qualquer burger.</p>
                     </div>
@@ -464,7 +536,9 @@
             <section id="bebidas-section" class="section cardapio">
                 <div class="container">
                     <div class="section-header">
-                        <span class="section-eyebrow"><i class="fas fa-martini-glass-citrus" aria-hidden="true"></i> Para refrescar</span>
+                        <span class="section-eyebrow">
+                            <i class="fas fa-martini-glass-citrus" aria-hidden="true"></i> Para refrescar
+                        </span>
                         <h2 class="section-title">Bebidas</h2>
                         <p class="section-subtitle">Refrigerantes, milkshakes, cervejas, sucos naturais e drinks clássicos.</p>
                         <nav class="subcategorias" aria-label="Tipos de bebida">
@@ -478,7 +552,9 @@
                     </div>
 
                     <div class="bebida-categoria" id="bebidas-refrigerantes">
-                        <h3 class="categoria-title"><i class="fas fa-glass-water" aria-hidden="true"></i> Refrigerantes</h3>
+                        <h3 class="categoria-title">
+                            <i class="fas fa-glass-water" aria-hidden="true"></i> Refrigerantes
+                        </h3>
 
                         <div class="cards-container">
 
@@ -557,7 +633,9 @@
                     </div>
 
                     <div class="bebida-categoria" id="bebidas-milkshakes">
-                        <h3 class="categoria-title"><i class="fas fa-ice-cream" aria-hidden="true"></i> Milkshakes</h3>
+                        <h3 class="categoria-title">
+                            <i class="fas fa-ice-cream" aria-hidden="true"></i> Milkshakes
+                        </h3>
 
                         <div class="cards-container">
 
@@ -660,7 +738,9 @@
                     </div>
 
                     <div class="bebida-categoria" id="bebidas-cervejas">
-                        <h3 class="categoria-title"><i class="fas fa-beer-mug-empty" aria-hidden="true"></i> Cervejas</h3>
+                        <h3 class="categoria-title">
+                            <i class="fas fa-beer-mug-empty" aria-hidden="true"></i> Cervejas
+                        </h3>
 
                         <div class="cards-container">
 
@@ -763,7 +843,9 @@
                     </div>
 
                     <div class="bebida-categoria" id="bebidas-sucos">
-                        <h3 class="categoria-title"><i class="fas fa-lemon" aria-hidden="true"></i> Sucos</h3>
+                        <h3 class="categoria-title">
+                            <i class="fas fa-lemon" aria-hidden="true"></i> Sucos
+                        </h3>
 
                         <div class="cards-container">
 
@@ -891,7 +973,9 @@
                     </div> 
 
                     <div class="bebida-categoria" id="bebidas-drinks">
-                        <h3 class="categoria-title"><i class="fas fa-martini-glass-citrus" aria-hidden="true"></i> Drinks</h3>
+                        <h3 class="categoria-title">
+                            <i class="fas fa-martini-glass-citrus" aria-hidden="true"></i> Drinks
+                        </h3>
 
                         <div class="cards-container">
 
@@ -1149,12 +1233,15 @@
             <section id="sobremesas-section" class="section cardapio">
                 <div class="container">
                     <div class="section-header">
-                        <span class="section-eyebrow"><i class="fas fa-ice-cream" aria-hidden="true"></i> Para finalizar</span>
+                        <span class="section-eyebrow">
+                            <i class="fas fa-ice-cream" aria-hidden="true"></i> 
+                            Para finalizar
+                        </span>
                         <h2 class="section-title">Sobremesas</h2>
                         <p class="section-subtitle">O final doce que a sua refeição merece.</p>
                     </div>
-                    <div class="cards-container">
 
+                    <div class="cards-container">
                         <div class="card">
                             <div class="card-img sobremesa-1"></div>
                             <div class="card-content">
@@ -1201,6 +1288,23 @@
                     <div class="footer-brand">
                         <span class="footer-logo">Durrr Burger</span>
                         <p class="footer-info">Hamburgueria artesanal com carnes naquele ponto, ingredientes selecionados e pães assados diariamente.</p>
+                        <ul class="footer-social">
+                            <li>
+                                <a href="https://instagram.com/__.fr3it4s.__" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/devlucasaf" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:freitas.lucasaf@gmail.com" class="footer-social-link" aria-label="E-mail">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
 
                     <nav class="footer-nav" aria-label="Atalhos do cardápio">
@@ -1218,7 +1322,7 @@
 
                 <div class="footer-bottom">
                     <span>&copy; <span class="footer-year">2026</span> Durrr Burger. Todos os direitos reservados.</span>
-                    <span>Imagens meramente ilustrativas.</span>
+                    <span>Imagens geradas por Inteligência Artificial.</span>
                 </div>
             </div>
         </footer>
@@ -1232,7 +1336,9 @@
         <aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert>
             <div class="cart-head">
                 <h2 id="cart-title">Meu pedido</h2>
-                <button type="button" class="cart-close" aria-label="Fechar meu pedido"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+                <button type="button" class="cart-close" aria-label="Fechar meu pedido">
+                    <i class="fas fa-xmark" aria-hidden="true"></i>
+                </button>
             </div>
 
             <div class="cart-body">
